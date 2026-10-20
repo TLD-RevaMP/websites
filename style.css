@@ -38,7 +38,7 @@ body {
 a { color: var(--accent); text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 3px; }
-.wrap { width: min(100% - 32px, 832px); margin-inline: auto; }
+.wrap { width: min(100% - 32px, 1200px); margin-inline: auto; }
 .skip-link {
   position: absolute;
   z-index: 1;
@@ -133,6 +133,21 @@ pre code { padding: 0; background: none; font-size: 1em; }
 .error-page { min-height: 100svh; display: flex; flex-direction: column; }
 .error-page main { flex: 1; padding-block: 80px; }
 .error-page h1 { font-size: clamp(2rem, 7vw, 3rem); }
+
+.section-intro, .section > p, .measurement-note p { max-width: 75ch; }
+.cards { display: grid; gap: 16px; margin-block: 24px; }
+.card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); font-size: .9375rem; }
+.card h3 { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+@media (min-width: 900px) {
+  #what { display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; }
+  #what > h2 { grid-column: 1 / -1; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; padding-left: 0; list-style: none; counter-reset: step; }
+  .steps li { margin: 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: 6px; counter-increment: step; }
+  .steps li::before { content: counter(step); display: block; margin-bottom: 8px; color: var(--muted); font: .8125rem/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  #measured table { font-size: .9375rem; }
+}
 
 @media (max-width: 540px) {
   .site-header { padding-block: 16px; gap: 10px 24px; }

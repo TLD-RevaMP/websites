@@ -102,15 +102,21 @@
         <li><strong>Close the game and back up your saves.</strong> Copy <code>Documents\TheLongDrive\Saves</code> somewhere safe before installing or updating.</li>
         <li><strong>Get the <a href="https://github.com/Normal99/TLD-RevaMP/releases/latest">latest release</a>.</strong> Use its installer if included, or download the zip and follow <code>INSTALL.txt</code> inside.</li>
       </ol>
-      <h3>Installer</h3>
-      <p>On Windows, download <code>install.ps1</code>, right-click it and choose <strong>Run with PowerShell</strong>. On Linux or Steam Deck, download <code>install.sh</code> and run <code>bash install.sh</code> in a terminal (Desktop Mode on Steam Deck). Choose <strong>Install or update</strong> and follow the prompts.</p>
-      <h3>Manual zip</h3>
-      <p>Extract into the game folder containing <code>TheLongDrive.exe</code>. Find it through Steam: right-click the game → <strong>Manage → Browse local files</strong>.</p>
-      <div class="note">
-        <h3>Linux / Proton</h3>
-        <p>For a manual install, add this under Steam → <strong>Properties → General → Launch Options</strong>:</p>
-        <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
-        <p>The installer sets the Proton override when the game’s Proton prefix exists; otherwise, follow its launch-option instructions.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Installer</h3>
+          <p>On Windows, download <code>install.ps1</code>, right-click it and choose <strong>Run with PowerShell</strong>. On Linux or Steam Deck, download <code>install.sh</code> and run <code>bash install.sh</code> in a terminal (Desktop Mode on Steam Deck). Choose <strong>Install or update</strong> and follow the prompts.</p>
+        </div>
+        <div class="card">
+          <h3>Manual zip</h3>
+          <p>Extract into the game folder containing <code>TheLongDrive.exe</code>. Find it through Steam: right-click the game → <strong>Manage → Browse local files</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Linux / Proton</h3>
+          <p>For a manual install, add this under Steam → <strong>Properties → General → Launch Options</strong>:</p>
+          <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
+          <p>The installer sets the Proton override when the game’s Proton prefix exists; otherwise, follow its launch-option instructions.</p>
+        </div>
       </div>
       <p class="small"><strong>Repair or uninstall:</strong> run the installer again and select <strong>Repair</strong> or <strong>Uninstall</strong>; for a manual install, re-extract the same zip to repair, or remove <code>winhttp.dll</code>, <code>doorstop_config.ini</code>, <code>.doorstop_version</code>, <code>changelog.txt</code> and the <code>BepInEx</code> folder to uninstall. Keep any settings or reports you want first.</p>
     </section>
