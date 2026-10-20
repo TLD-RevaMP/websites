@@ -63,7 +63,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-weight: 600; text-decoration: none; }
 .brand-icon { color: var(--accent); flex: none; }
-nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 22px; max-width: 100%; }
 nav a { padding-block: 8px; color: var(--muted); text-decoration: none; }
 nav a:hover { color: var(--accent); text-decoration: underline; }
 .hero { padding-block: 76px 64px; }
@@ -94,6 +94,8 @@ p { margin: 0 0 16px; }
 .button:hover { border-color: var(--accent); text-decoration: underline; }
 .primary { border-color: var(--ok); background: var(--ok); color: var(--on-primary); }
 .hero-note { margin: 16px 0 0; font-size: .8125rem; color: var(--muted); }
+.latest { margin: 16px 0 0; font-size: .875rem; color: var(--muted); }
+.latest + .hero-note { margin-top: 8px; }
 .section { padding-block: 40px; border-top: 1px solid var(--line); }
 .section > :last-child { margin-bottom: 0; }
 .section-intro { color: var(--muted); }
@@ -139,6 +141,16 @@ pre code { padding: 0; background: none; font-size: 1em; }
 .card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); font-size: .9375rem; }
 .card h3 { margin-top: 0; }
 .card > :last-child { margin-bottom: 0; }
+.compact-list { margin: 0; padding-left: 22px; max-width: 75ch; }
+.compact-list li + li { margin-top: 8px; }
+.sync-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; margin: 24px 0; padding: 0; list-style: none; }
+.sync-grid li { min-width: 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); font-size: .9375rem; }
+.sync-grid strong { display: block; margin-bottom: 6px; }
+.sync-grid span { color: var(--muted); }
+#questions details { margin: 0; border-bottom: 1px solid var(--line); }
+#questions summary { width: 100%; padding-block: 16px; font-size: .9375rem; }
+#questions details > p { max-width: 75ch; }
+.feature > div, .card { min-width: 0; }
 @media (min-width: 900px) {
   #what { display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; }
   #what > h2 { grid-column: 1 / -1; }

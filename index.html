@@ -8,6 +8,11 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="TLD RevaMP — Performance &amp; multiplayer for The Long Drive">
   <meta property="og:description" content="Performance fixes and rebuilt multiplayer for The Long Drive's beta branch. Measured results, installation, and playing together.">
+  <meta property="og:image" content="https://tldrevamp.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TLD RevaMP — Performance fixes and rebuilt multiplayer for The Long Drive's beta branch. tldrevamp.com">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230969da'/%3E%3Cpath d='M10 5 6 27M22 5l4 22M16 6v4m0 4v4m0 4v4' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E">
@@ -21,9 +26,11 @@
       tldrevamp.com
     </a>
     <nav aria-label="Main navigation">
+      <a href="#what">What it does</a>
       <a href="#measured">Measured</a>
       <a href="#install">Install</a>
-      <a href="#play">Play together</a>
+      <a href="#multiplayer">Multiplayer</a>
+      <a href="#questions">Questions</a>
     </nav>
   </header>
 
@@ -36,7 +43,17 @@
         <a class="button primary" href="https://github.com/Normal99/TLD-RevaMP/releases/latest">Download <span aria-hidden="true">↓</span></a>
         <a class="button" href="https://github.com/Normal99/TLD-RevaMP">Source <span aria-hidden="true">↗</span></a>
       </div>
+      <p class="latest">Latest: 0.69.0 — <time datetime="2026-10-17">17 October 2026</time> · <a href="https://github.com/Normal99/TLD-RevaMP/releases/tag/v0.69.0">What's new</a></p>
       <p class="hero-note">Requires your own copy of The Long Drive on Steam.</p>
+    </section>
+
+    <section class="section" id="whats-new">
+      <h2>What's new in 0.69.0</h2>
+      <ul class="compact-list">
+        <li>Hosts can see and manage players who have left the game.</li>
+        <li>Hits on cars, creatures and items are checked by the host.</li>
+        <li>Everyone must update: players on different RevaMP versions cannot join each other, and the game explains a mismatch.</li>
+      </ul>
     </section>
 
     <section class="section" id="what">
@@ -94,6 +111,24 @@
       </div>
     </section>
 
+    <!--
+    <section class="section" id="screenshots">
+      <h2>Screenshots</h2>
+      <div class="cards">
+        Add figures with local images and descriptive alt text here before uncommenting.
+      </div>
+    </section>
+    -->
+
+    <section class="section" id="requirements">
+      <h2>Requirements</h2>
+      <ul class="compact-list">
+        <li>Your own copy of <strong>The Long Drive on Steam</strong>, on the <strong>beta</strong> branch.</li>
+        <li><strong>Windows</strong> or <strong>Linux with Proton</strong>, including Steam Deck.</li>
+        <li>Everyone in a multiplayer session needs the <strong>same RevaMP version</strong>.</li>
+      </ul>
+    </section>
+
     <section class="section" id="install">
       <h2>Install</h2>
       <p class="section-intro">Windows or Linux with Proton, including Steam Deck. BepInEx, the mod loader, is included in the release zip.</p>
@@ -121,8 +156,18 @@
       <p class="small"><strong>Repair or uninstall:</strong> run the installer again and select <strong>Repair</strong> or <strong>Uninstall</strong>; for a manual install, re-extract the same zip to repair, or remove <code>winhttp.dll</code>, <code>doorstop_config.ini</code>, <code>.doorstop_version</code>, <code>changelog.txt</code> and the <code>BepInEx</code> folder to uninstall. Keep any settings or reports you want first.</p>
     </section>
 
-    <section class="section" id="play">
-      <h2>Play together</h2>
+    <section class="section" id="multiplayer">
+      <h2>What syncs in multiplayer</h2>
+      <ul class="sync-grid">
+        <li><strong>Players</strong><span>On foot, seated, driving or riding as passengers, with footsteps and other player sounds. Stand in a moving bus or on a car.</span></li>
+        <li><strong>Vehicles</strong><span>Driving, crashes, damage, parts coming off, fuel and fluids.</span></li>
+        <li><strong>Items &amp; doors</strong><span>Carry, throw and drop loose items; share building doors and gates.</span></li>
+        <li><strong>Creatures &amp; combat</strong><span>Hunting, attacks, shots, deaths and bodies; guns, bullet holes and explosions.</span></li>
+        <li><strong>World events &amp; radio</strong><span>Sandstorms, tumbleweeds and the radio.</span></li>
+        <li><strong>Chat &amp; voice</strong><span>Text chat with Enter; proximity voice within 60 m using the game's Voice chat key (K if unbound). Mute, and kick for the host.</span></li>
+      </ul>
+      <p>Players can be anywhere on the map. Each machine simulates the cars, items and creatures near its own player.</p>
+      <h3 id="play">Play together</h3>
       <p class="section-intro">Everyone needs the same RevaMP version.</p>
       <ol class="steps">
         <li><strong>Host:</strong> start or load a world, open <strong>Multiplayer</strong> from the game’s menu or press <kbd>F11</kbd> in game, then choose <strong>Host</strong>. A password is optional.</li>
@@ -131,10 +176,54 @@
       <p>Steam relay handles the connection, so no port forwarding is needed. The host’s machine owns the world and save; joining loads that world and leaves your own saves alone.</p>
     </section>
 
+    <section class="section" id="questions">
+      <h2>Questions</h2>
+      <details>
+        <summary>Does it work on the normal (non-beta) game?</summary>
+        <p>No. RevaMP is built for the beta only. The normal game uses different world generation, save and multiplayer code.</p>
+      </details>
+      <details>
+        <summary>How do we play together?</summary>
+        <p>One player starts or loads a world and chooses <strong>Host</strong> in the Multiplayer menu (<kbd>F11</kbd> in game). Steam friends select that player and choose <strong>Join</strong>. A password is optional, and no port forwarding is needed. Everyone needs the same RevaMP version; a mismatch is refused with an explanation. See <a href="#play">Play together</a>.</p>
+      </details>
+      <details>
+        <summary>What happens to my saves when I join someone?</summary>
+        <p>The host's machine owns the world and its save. Joining loads that world and leaves your own saves alone.</p>
+      </details>
+      <details>
+        <summary>Which keys does it add?</summary>
+        <p><kbd>F11</kbd> opens Multiplayer, <kbd>Page Up</kbd> shows the performance overlay, and <kbd>Page Down</kbd> saves a bug report. These keys can be changed in <code>BepInEx\config\tldrevamp.core.cfg</code>. To talk, hold the game's <strong>Voice chat</strong> key (K if unbound).</p>
+      </details>
+      <details>
+        <summary>Linux or Steam Deck?</summary>
+        <p>Use Proton. For a manual install, set Steam → <strong>Properties → General → Launch Options</strong> to:</p>
+        <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
+        <p>See <a href="#install">Install</a> for the installer and manual steps.</p>
+      </details>
+      <details>
+        <summary>Something went wrong. What should I send?</summary>
+        <p>Press <kbd>Page Down</kbd> when it happens and again after playing. Attach the report zip to <a href="https://github.com/Normal99/TLD-RevaMP/issues">a RevaMP issue</a> and describe the problem. See <a href="#report">Report a problem</a>.</p>
+      </details>
+      <details>
+        <summary>How do I remove it?</summary>
+        <p>Run the installer and choose <strong>Uninstall</strong>, or remove the loader files from a manual installation. See <a href="#install">Install</a> for the file list.</p>
+      </details>
+    </section>
+
     <section class="section" id="report">
       <h2>Report a problem</h2>
       <p><a href="https://github.com/Normal99/TLD-RevaMP/issues">Open a GitHub issue <span aria-hidden="true">↗</span></a> describing the bug and when it happened. Include your game branch and RevaMP version, what you were doing, what you expected, and what happened instead. For multiplayer, say whether you were hosting or joining and how to reproduce it.</p>
-      <p class="note">Keep report zips and marks out of public issues. The developers ask for those files privately.</p>
+      <p class="note">Press <kbd>Page Down</kbd> when the problem happens to save a report zip, then attach it to your issue.</p>
+    </section>
+
+    <section class="section" id="credits">
+      <h2>Credits</h2>
+      <ul class="compact-list">
+        <li><strong>The Long Drive</strong> by Gab and Genesz.</li>
+        <li><strong>BepInEx</strong> and <strong>HarmonyX</strong>, the mod loader and patching library RevaMP is built on.</li>
+        <li>The trailer brakes, parked-trailer fix and driving assists follow ideas from <strong>Long Haul Overhaul</strong> by QuantumRage &amp; Wisher; they are written anew for RevaMP.</li>
+        <li>Thanks to <strong>Killenger</strong> for the <strong>TLDAutopilot</strong> mod, used in testing.</li>
+      </ul>
     </section>
   </main>
 
