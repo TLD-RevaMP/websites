@@ -13,217 +13,308 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="TLD RevaMP — Performance fixes and rebuilt multiplayer for The Long Drive's beta branch. tldrevamp.com">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230969da'/%3E%3Cpath d='M10 5 6 27M22 5l4 22M16 6v4m0 4v4m0 4v4' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101218" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101218'/%3E%3Cpath d='M12 4 5 28h22L20 4z' fill='%232a2f3a'/%3E%3Cpath d='M16 6v4m0 4v5m0 4v5' stroke='%23f2b134' stroke-width='2.4'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="brand" href="./" aria-label="TLD RevaMP home">
-      <svg class="brand-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M10 5 6 27M22 5l4 22M16 6v4m0 4v4m0 4v4" stroke="var(--bg)" stroke-width="2"/></svg>
-      tldrevamp.com
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="#what">What it does</a>
-      <a href="#measured">Measured</a>
-      <a href="#install">Install</a>
-      <a href="#multiplayer">Multiplayer</a>
-      <a href="#questions">Questions</a>
-    </nav>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="TLD RevaMP home">
+        <svg class="brand-icon" aria-hidden="true" width="26" height="26" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#1a1e28"/><path d="M12 4 5 28h22L20 4z" fill="#2f3542"/><path d="M16 6v4m0 4v5m0 4v5" stroke="#f2b134" stroke-width="2.4"/></svg>
+        TLD RevaMP
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#what">Features</a>
+        <a href="#measured">Measured</a>
+        <a href="#multiplayer">Multiplayer</a>
+        <a href="#install">Install</a>
+        <a href="#questions">FAQ</a>
+        <a class="nav-cta" href="https://github.com/Normal99/TLD-RevaMP/releases/latest">Download</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main" class="wrap">
+  <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow">The Long Drive <span aria-hidden="true">/</span> Beta branch</p>
-      <h1 id="hero-title">TLD RevaMP</h1>
-      <p class="lead">Performance fixes and rebuilt multiplayer for The Long Drive’s beta branch.</p>
-      <div class="actions">
-        <a class="button primary" href="https://github.com/Normal99/TLD-RevaMP/releases/latest">Download <span aria-hidden="true">↓</span></a>
-        <a class="button" href="https://github.com/Normal99/TLD-RevaMP">Source <span aria-hidden="true">↗</span></a>
+      <svg class="hero-art" aria-hidden="true" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop class="sky-top" offset="0"/>
+            <stop class="sky-mid" offset=".55"/>
+            <stop class="sky-low" offset=".9"/>
+          </linearGradient>
+        </defs>
+        <rect width="1600" height="700" fill="url(#sky)"/>
+        <circle class="sun" cx="1130" cy="385" r="70" opacity=".9"/>
+        <path class="dune-far" d="M0 400 C220 360 380 395 560 372 S900 350 1100 382 1400 360 1600 388 V700 H0Z"/>
+        <path class="dune-near" d="M0 440 C260 418 470 446 700 428 S1100 412 1300 436 1500 430 1600 444 V700 H0Z"/>
+        <rect class="ground" y="450" width="1600" height="250"/>
+        <path class="road" d="M1092 450 L1108 450 L1560 700 L620 700Z"/>
+        <path class="line" d="M1099 456h2l3 10h-5zM1095 480h6l5 22h-12zM1088 520h10l8 34h-20zM1078 578h16l12 52h-30zM1062 662h24l10 38h-38z"/>
+      </svg>
+      <div class="wrap hero-inner">
+        <p class="eyebrow">The Long Drive <span aria-hidden="true">/</span> Beta branch mod</p>
+        <h1 id="hero-title">The long drive, together.</h1>
+        <p class="lead">TLD RevaMP makes The Long Drive’s beta run better and rebuilds its multiplayer from scratch: share the road, the cars and the whole map with your friends.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/Normal99/TLD-RevaMP/releases/latest">Download RevaMP <span aria-hidden="true">↓</span></a>
+          <a class="button" href="#install">How to install</a>
+        </div>
+        <p class="latest">Latest: 0.69.0 — <time datetime="2026-10-17">17 October 2026</time> · <a href="https://github.com/Normal99/TLD-RevaMP/releases/tag/v0.69.0">What's new</a></p>
+        <p class="hero-note">Free and open source. Requires your own copy of The Long Drive on Steam.</p>
       </div>
-      <p class="latest">Latest: 0.69.0 — <time datetime="2026-10-17">17 October 2026</time> · <a href="https://github.com/Normal99/TLD-RevaMP/releases/tag/v0.69.0">What's new</a></p>
-      <p class="hero-note">Requires your own copy of The Long Drive on Steam.</p>
     </section>
 
-    <section class="section" id="whats-new">
-      <h2>What's new in 0.69.0</h2>
-      <ul class="compact-list">
-        <li>Hosts can see and manage players who have left the game.</li>
-        <li>Hits on cars, creatures and items are checked by the host.</li>
-        <li>Everyone must update: players on different RevaMP versions cannot join each other, and the game explains a mismatch.</li>
-      </ul>
+    <section class="stats" aria-label="Measured highlights">
+      <div class="wrap">
+        <ul>
+          <li><span class="stat-value">+40%</span><span class="stat-label">FPS with 16 parked cars</span></li>
+          <li><span class="stat-value">2×</span><span class="stat-label">smoother worst frame while driving</span></li>
+          <li><span class="stat-value">26×</span><span class="stat-label">fewer memory cleanups on the road</span></li>
+          <li><span class="stat-value">−22%</span><span class="stat-label">wait for the start area in a new world</span></li>
+        </ul>
+      </div>
     </section>
 
-    <section class="section" id="what">
-      <h2>What it does</h2>
-      <div class="feature">
-        <span class="feature-number" aria-hidden="true">01</span>
-        <div><h3>Runs better</h3>
-          <p>Reduces work the game repeats, spreads out world generation, and fixes bugs in cars, items and saves. Less time spent on repeated work means more time for the road.</p>
+    <section class="section" id="whats-new" aria-labelledby="new-title">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Latest release</p>
+          <h2 id="new-title">What's new in 0.69.0</h2>
+        </div>
+        <ul class="compact-list">
+          <li>Hosts can see and manage players who have left the game.</li>
+          <li>Hits on cars, creatures and items are checked by the host.</li>
+          <li>Everyone must update: players on different RevaMP versions cannot join each other, and the game explains a mismatch.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt" id="what" aria-labelledby="what-title">
+      <div class="wrap">
+        <p class="kicker">Features</p>
+        <h2 id="what-title">What it does</h2>
+        <div class="rows">
+          <div class="row">
+            <span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l4-4"/><path d="M3.3 17a9 9 0 1 1 17.4 0"/><path d="M5 21h14"/></svg></span>
+            <div><h3>Runs better</h3>
+              <p>Reduces work the game repeats, spreads out world generation, and fixes bugs in cars, items and saves. Less time spent on repeated work means more time for the road.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0"/><path d="M13.5 15.5a4.5 4.5 0 0 1 8 3"/></svg></span>
+            <div><h3>Real multiplayer</h3>
+              <p>A multiplayer system built from scratch replaces the beta’s own multiplayer. Share players, vehicles, loose items and world interactions, with text chat and proximity voice.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span>
+            <div><h3>Go anywhere</h3>
+              <p>Players can be anywhere on the map. Each machine simulates the cars, items and creatures near its own player, so nobody has to stay close to the host.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 2 5-6"/></svg></span>
+            <div><h3>Measured, not guessed</h3>
+              <p>Every change is checked on the same scripted runs with and without RevaMP. The numbers below are medians of real runs on the same machine.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="feature">
-        <span class="feature-number" aria-hidden="true">02</span>
-        <div><h3>Real multiplayer</h3>
-          <p>A multiplayer system built from scratch replaces the beta’s own multiplayer. Share players, vehicles, loose items and world interactions, with text chat and proximity voice. Players can explore anywhere on the map.</p>
-        </div>
-      </div>
     </section>
 
-    <section class="section" id="measured">
-      <h2>Measured</h2>
-      <p class="section-intro">The same game, the same runs, with and without RevaMP.</p>
-      <table>
-        <caption>Base game compared with RevaMP 0.69.0</caption>
-        <thead><tr><th scope="col">Scenario / measure</th><th scope="col">Base game</th><th scope="col">RevaMP</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">16 parked cars <span class="unit">FPS · higher is better</span></th><td>51.6 <span class="range">(44–52)</span></td><td><strong>72.3</strong> <span class="range">(68–74)</span></td></tr>
-          <tr><th scope="row">300 resting items <span class="unit">FPS · higher is better</span></th><td>96.8 <span class="range">(72–115)</span></td><td><strong>138.2</strong> <span class="range">(135–146)</span></td></tr>
-          <tr><th scope="row">Travel: 1.5 km at 30 m/s <span class="unit">FPS · higher is better</span></th><td>158.1 <span class="range">(123–173)</span></td><td><strong>188.5</strong> <span class="range">(178–190)</span></td></tr>
-          <tr><th scope="row">Travel: 1.5 km at 60 m/s <span class="unit">FPS · higher is better</span></th><td>163.0 <span class="range">(144–173)</span></td><td><strong>189.5</strong> <span class="range">(189–192)</span></td></tr>
-          <tr><th scope="row">Worst frame, travel at 30 m/s <span class="unit">Milliseconds · lower is better</span></th><td>30.6</td><td><strong>15.3</strong></td></tr>
-          <tr><th scope="row">New world: start area ready <span class="unit">Seconds · lower is better</span></th><td>3.56</td><td><strong>2.79</strong></td></tr>
-          <tr><th scope="row">Memory cleanups, travel at 30 m/s <span class="unit">Garbage collections per second · lower is better</span></th><td>2.1</td><td><strong>0.08</strong></td></tr>
-          <tr><th scope="row">Memory kept in use by scripts <span class="unit">MB · lower is better</span></th><td>About 90</td><td>About 125</td></tr>
-        </tbody>
-      </table>
-      <p class="small">RevaMP reuses memory to reduce pauses from cleaning it up; it keeps a little more memory in use.</p>
-      <details>
-        <summary>More measurements</summary>
+    <section class="section" id="measured" aria-labelledby="measured-title">
+      <div class="wrap">
+        <p class="kicker">Benchmarks</p>
+        <h2 id="measured-title">Measured</h2>
+        <p class="section-intro">The same game, the same runs, with and without RevaMP.</p>
         <table>
-          <caption>Additional results from the same runs</caption>
+          <caption>Base game compared with RevaMP 0.69.0</caption>
           <thead><tr><th scope="col">Scenario / measure</th><th scope="col">Base game</th><th scope="col">RevaMP</th></tr></thead>
           <tbody>
-            <tr><th scope="row">16 parked cars: slowest 1% of frames <span class="unit">Milliseconds · lower is better</span></th><td>23.3</td><td>18.1</td></tr>
-            <tr><th scope="row">Travel at 60 m/s: slowest 1% of frames <span class="unit">Milliseconds · lower is better</span></th><td>16.9</td><td>11.5</td></tr>
-            <tr><th scope="row">New world: slowest 1% of frames while loading <span class="unit">Milliseconds · lower is better</span></th><td>64</td><td>36</td></tr>
-            <tr><th scope="row">Standing at the start, 30 seconds <span class="unit">FPS · higher is better</span></th><td>173.3 <span class="range">(131–186)</span></td><td>186.1 <span class="range">(171–190)</span></td></tr>
-            <tr><th scope="row">Standing at the start: slowest 1% of frames <span class="unit">Milliseconds · lower is better</span></th><td>11.2</td><td>11.6</td></tr>
-            <tr><th scope="row">Memory discarded, travel at 30 m/s <span class="unit">MB per second · lower is better</span></th><td>17.9</td><td>1.5</td></tr>
+            <tr><th scope="row">16 parked cars <span class="unit">FPS · higher is better</span></th><td>51.6 <span class="range">(44–52)</span></td><td><strong>72.3</strong> <span class="range">(68–74)</span></td></tr>
+            <tr><th scope="row">300 resting items <span class="unit">FPS · higher is better</span></th><td>96.8 <span class="range">(72–115)</span></td><td><strong>138.2</strong> <span class="range">(135–146)</span></td></tr>
+            <tr><th scope="row">Travel: 1.5 km at 30 m/s <span class="unit">FPS · higher is better</span></th><td>158.1 <span class="range">(123–173)</span></td><td><strong>188.5</strong> <span class="range">(178–190)</span></td></tr>
+            <tr><th scope="row">Travel: 1.5 km at 60 m/s <span class="unit">FPS · higher is better</span></th><td>163.0 <span class="range">(144–173)</span></td><td><strong>189.5</strong> <span class="range">(189–192)</span></td></tr>
+            <tr><th scope="row">Worst frame, travel at 30 m/s <span class="unit">Milliseconds · lower is better</span></th><td>30.6</td><td><strong>15.3</strong></td></tr>
+            <tr><th scope="row">New world: start area ready <span class="unit">Seconds · lower is better</span></th><td>3.56</td><td><strong>2.79</strong></td></tr>
+            <tr><th scope="row">Memory cleanups, travel at 30 m/s <span class="unit">Garbage collections per second · lower is better</span></th><td>2.1</td><td><strong>0.08</strong></td></tr>
+            <tr><th scope="row">Memory kept in use by scripts <span class="unit">MB · lower is better</span></th><td>About 90</td><td>About 125</td></tr>
           </tbody>
         </table>
-      </details>
-      <div class="measurement-note">
-        <h3>How it was measured</h3>
-        <p>One machine, the same beta game, world (seed 20260924), settings and scripted runs: the mod loader alone, then RevaMP 0.69.0 added. Three alternating runs each; values are medians, with ranges in brackets. 1280 × 720, Ultra, vsync off, no frame cap. Frame times were recorded on the game’s main loop, on the processor side.</p>
+        <p class="small">RevaMP reuses memory to reduce pauses from cleaning it up; it keeps a little more memory in use.</p>
+        <details>
+          <summary>More measurements</summary>
+          <table>
+            <caption>Additional results from the same runs</caption>
+            <thead><tr><th scope="col">Scenario / measure</th><th scope="col">Base game</th><th scope="col">RevaMP</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">16 parked cars: slowest 1% of frames <span class="unit">Milliseconds · lower is better</span></th><td>23.3</td><td>18.1</td></tr>
+              <tr><th scope="row">Travel at 60 m/s: slowest 1% of frames <span class="unit">Milliseconds · lower is better</span></th><td>16.9</td><td>11.5</td></tr>
+              <tr><th scope="row">New world: slowest 1% of frames while loading <span class="unit">Milliseconds · lower is better</span></th><td>64</td><td>36</td></tr>
+              <tr><th scope="row">Standing at the start, 30 seconds <span class="unit">FPS · higher is better</span></th><td>173.3 <span class="range">(131–186)</span></td><td>186.1 <span class="range">(171–190)</span></td></tr>
+              <tr><th scope="row">Standing at the start: slowest 1% of frames <span class="unit">Milliseconds · lower is better</span></th><td>11.2</td><td>11.6</td></tr>
+              <tr><th scope="row">Memory discarded, travel at 30 m/s <span class="unit">MB per second · lower is better</span></th><td>17.9</td><td>1.5</td></tr>
+            </tbody>
+          </table>
+        </details>
+        <div class="measurement-note">
+          <h3>How it was measured</h3>
+          <p>One machine, the same beta game, world (seed 20260924), settings and scripted runs: the mod loader alone, then RevaMP 0.69.0 added. Three alternating runs each; values are medians, with ranges in brackets. 1280 × 720, Ultra, vsync off, no frame cap. Frame times were recorded on the game’s main loop, on the processor side.</p>
+        </div>
       </div>
     </section>
 
     <!--
     <section class="section" id="screenshots">
-      <h2>Screenshots</h2>
-      <div class="cards">
-        Add figures with local images and descriptive alt text here before uncommenting.
+      <div class="wrap">
+        <h2>Screenshots</h2>
+        <div class="cards">
+          Add figures with local images and descriptive alt text here before uncommenting.
+        </div>
       </div>
     </section>
     -->
 
-    <section class="section" id="requirements">
-      <h2>Requirements</h2>
-      <ul class="compact-list">
-        <li>Your own copy of <strong>The Long Drive on Steam</strong>, on the <strong>beta</strong> branch.</li>
-        <li><strong>Windows</strong> or <strong>Linux with Proton</strong>, including Steam Deck.</li>
-        <li>Everyone in a multiplayer session needs the <strong>same RevaMP version</strong>.</li>
-      </ul>
+    <section class="section alt" id="multiplayer" aria-labelledby="mp-title">
+      <div class="wrap">
+        <p class="kicker">Multiplayer</p>
+        <h2 id="mp-title">What syncs</h2>
+        <ul class="sync-grid">
+          <li><strong><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="6" r="3"/><path d="M6 21v-4a6 6 0 0 1 12 0v4"/></svg></span>Players</strong><span>On foot, seated, driving or riding as passengers, with footsteps and other player sounds. Stand in a moving bus or on a car.</span></li>
+          <li><strong><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-3l2-5h14l2 5v3z"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/></svg></span>Vehicles</strong><span>Driving, crashes, damage, parts coming off, fuel and fluids.</span></li>
+          <li><strong><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg></span>Items &amp; doors</strong><span>Carry, throw and drop loose items; share building doors and gates.</span></li>
+          <li><strong><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5"/></svg></span>Creatures &amp; combat</strong><span>Hunting, attacks, shots, deaths and bodies; guns, bullet holes and explosions.</span></li>
+          <li><strong><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 15c3-3 6 3 9 0s6 3 9 0"/><path d="M3 9c3-3 6 3 9 0s6 3 9 0"/></svg></span>World events &amp; radio</strong><span>Sandstorms, tumbleweeds and the radio.</span></li>
+          <li><strong><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-5 4z"/></svg></span>Chat &amp; voice</strong><span>Text chat with Enter; proximity voice within 60 m using the game's Voice chat key (K if unbound). Mute, and kick for the host.</span></li>
+        </ul>
+        <h3 id="play">Play together</h3>
+        <p class="section-intro">Everyone needs the same RevaMP version.</p>
+        <ol class="steps">
+          <li><strong>Host:</strong> start or load a world, open <strong>Multiplayer</strong> from the game’s menu or press <kbd>F11</kbd> in game, then choose <strong>Host</strong>. A password is optional.</li>
+          <li><strong>Join:</strong> select the Steam friend who is hosting in the Multiplayer menu and choose <strong>Join</strong>.</li>
+        </ol>
+        <p>Steam relay handles the connection, so no port forwarding is needed. The host’s machine owns the world and save; joining loads that world and leaves your own saves alone.</p>
+      </div>
     </section>
 
-    <section class="section" id="install">
-      <h2>Install</h2>
-      <p class="section-intro">Windows or Linux with Proton, including Steam Deck. BepInEx, the mod loader, is included in the release zip.</p>
-      <ol class="steps">
-        <li><strong>Switch to the beta branch.</strong> In Steam, right-click The Long Drive → <strong>Properties → Betas → beta</strong>. Let the update finish.</li>
-        <li><strong>Close the game and back up your saves.</strong> Copy <code>Documents\TheLongDrive\Saves</code> somewhere safe before installing or updating.</li>
-        <li><strong>Get the <a href="https://github.com/Normal99/TLD-RevaMP/releases/latest">latest release</a>.</strong> Use its installer if included, or download the zip and follow <code>INSTALL.txt</code> inside.</li>
-      </ol>
-      <div class="cards">
-        <div class="card">
-          <h3>Installer</h3>
-          <p>On Windows, download <code>install.ps1</code>, right-click it and choose <strong>Run with PowerShell</strong>. On Linux or Steam Deck, download <code>install.sh</code> and run <code>bash install.sh</code> in a terminal (Desktop Mode on Steam Deck). Choose <strong>Install or update</strong> and follow the prompts.</p>
-        </div>
-        <div class="card">
-          <h3>Manual zip</h3>
-          <p>Extract into the game folder containing <code>TheLongDrive.exe</code>. Find it through Steam: right-click the game → <strong>Manage → Browse local files</strong>.</p>
-        </div>
-        <div class="card">
-          <h3>Linux / Proton</h3>
-          <p>For a manual install, add this under Steam → <strong>Properties → General → Launch Options</strong>:</p>
-          <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
-          <p>The installer sets the Proton override when the game’s Proton prefix exists; otherwise, follow its launch-option instructions.</p>
+    <section class="section" id="requirements" aria-labelledby="req-title">
+      <div class="wrap">
+        <p class="kicker">Before you start</p>
+        <h2 id="req-title">Requirements</h2>
+        <div class="cards">
+          <div class="card"><h3><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>The game, beta branch</h3><p>Your own copy of <strong>The Long Drive on Steam</strong>, switched to the <strong>beta</strong> branch.</p></div>
+          <div class="card"><h3><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>Windows or Linux</h3><p><strong>Windows</strong>, or <strong>Linux with Proton</strong> including Steam Deck.</p></div>
+          <div class="card"><h3><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Same version</h3><p>Everyone in a multiplayer session needs the <strong>same RevaMP version</strong>.</p></div>
         </div>
       </div>
-      <p class="small"><strong>Repair or uninstall:</strong> run the installer again and select <strong>Repair</strong> or <strong>Uninstall</strong>; for a manual install, re-extract the same zip to repair, or remove <code>winhttp.dll</code>, <code>doorstop_config.ini</code>, <code>.doorstop_version</code>, <code>changelog.txt</code> and the <code>BepInEx</code> folder to uninstall. Keep any settings or reports you want first.</p>
     </section>
 
-    <section class="section" id="multiplayer">
-      <h2>What syncs in multiplayer</h2>
-      <ul class="sync-grid">
-        <li><strong>Players</strong><span>On foot, seated, driving or riding as passengers, with footsteps and other player sounds. Stand in a moving bus or on a car.</span></li>
-        <li><strong>Vehicles</strong><span>Driving, crashes, damage, parts coming off, fuel and fluids.</span></li>
-        <li><strong>Items &amp; doors</strong><span>Carry, throw and drop loose items; share building doors and gates.</span></li>
-        <li><strong>Creatures &amp; combat</strong><span>Hunting, attacks, shots, deaths and bodies; guns, bullet holes and explosions.</span></li>
-        <li><strong>World events &amp; radio</strong><span>Sandstorms, tumbleweeds and the radio.</span></li>
-        <li><strong>Chat &amp; voice</strong><span>Text chat with Enter; proximity voice within 60 m using the game's Voice chat key (K if unbound). Mute, and kick for the host.</span></li>
-      </ul>
-      <p>Players can be anywhere on the map. Each machine simulates the cars, items and creatures near its own player.</p>
-      <h3 id="play">Play together</h3>
-      <p class="section-intro">Everyone needs the same RevaMP version.</p>
-      <ol class="steps">
-        <li><strong>Host:</strong> start or load a world, open <strong>Multiplayer</strong> from the game’s menu or press <kbd>F11</kbd> in game, then choose <strong>Host</strong>. A password is optional.</li>
-        <li><strong>Join:</strong> select the Steam friend who is hosting in the Multiplayer menu and choose <strong>Join</strong>.</li>
-      </ol>
-      <p>Steam relay handles the connection, so no port forwarding is needed. The host’s machine owns the world and save; joining loads that world and leaves your own saves alone.</p>
+    <section class="section alt" id="install" aria-labelledby="install-title">
+      <div class="wrap">
+        <p class="kicker">Get started</p>
+        <h2 id="install-title">Install</h2>
+        <p class="section-intro">BepInEx, the mod loader, is included in the release.</p>
+        <ol class="steps">
+          <li><strong>Switch to the beta branch.</strong> In Steam, right-click The Long Drive → <strong>Properties → Betas → beta</strong>. Let the update finish.</li>
+          <li><strong>Close the game and back up your saves.</strong> Copy <code>Documents\TheLongDrive\Saves</code> somewhere safe before installing or updating.</li>
+          <li><strong>Get the <a href="https://github.com/Normal99/TLD-RevaMP/releases/latest">latest release</a>.</strong> Use its installer if included, or download the zip and follow <code>INSTALL.txt</code> inside.</li>
+        </ol>
+        <div class="cards">
+          <div class="card">
+            <h3>Installer</h3>
+            <p>On Windows, download <code>install.ps1</code>, right-click it and choose <strong>Run with PowerShell</strong>. On Linux or Steam Deck, download <code>install.sh</code> and run <code>bash install.sh</code> in a terminal (Desktop Mode on Steam Deck). Choose <strong>Install or update</strong> and follow the prompts.</p>
+          </div>
+          <div class="card">
+            <h3>Manual zip</h3>
+            <p>Extract into the game folder containing <code>TheLongDrive.exe</code>. Find it through Steam: right-click the game → <strong>Manage → Browse local files</strong>.</p>
+          </div>
+          <div class="card">
+            <h3>Linux / Proton</h3>
+            <p>For a manual install, add this under Steam → <strong>Properties → General → Launch Options</strong>:</p>
+            <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
+            <p>The installer sets the Proton override when the game’s Proton prefix exists; otherwise, follow its launch-option instructions.</p>
+          </div>
+        </div>
+        <p class="small"><strong>Repair or uninstall:</strong> run the installer again and select <strong>Repair</strong> or <strong>Uninstall</strong>; for a manual install, re-extract the same zip to repair, or remove <code>winhttp.dll</code>, <code>doorstop_config.ini</code>, <code>.doorstop_version</code>, <code>changelog.txt</code> and the <code>BepInEx</code> folder to uninstall. Keep any settings or reports you want first.</p>
+      </div>
     </section>
 
-    <section class="section" id="questions">
-      <h2>Questions</h2>
-      <details>
-        <summary>Does it work on the normal (non-beta) game?</summary>
-        <p>No. RevaMP is built for the beta only. The normal game uses different world generation, save and multiplayer code.</p>
-      </details>
-      <details>
-        <summary>How do we play together?</summary>
-        <p>One player starts or loads a world and chooses <strong>Host</strong> in the Multiplayer menu (<kbd>F11</kbd> in game). Steam friends select that player and choose <strong>Join</strong>. A password is optional, and no port forwarding is needed. Everyone needs the same RevaMP version; a mismatch is refused with an explanation. See <a href="#play">Play together</a>.</p>
-      </details>
-      <details>
-        <summary>What happens to my saves when I join someone?</summary>
-        <p>The host's machine owns the world and its save. Joining loads that world and leaves your own saves alone.</p>
-      </details>
-      <details>
-        <summary>Which keys does it add?</summary>
-        <p><kbd>F11</kbd> opens Multiplayer, <kbd>Page Up</kbd> shows the performance overlay, and <kbd>Page Down</kbd> saves a bug report. These keys can be changed in <code>BepInEx\config\tldrevamp.core.cfg</code>. To talk, hold the game's <strong>Voice chat</strong> key (K if unbound).</p>
-      </details>
-      <details>
-        <summary>Linux or Steam Deck?</summary>
-        <p>Use Proton. For a manual install, set Steam → <strong>Properties → General → Launch Options</strong> to:</p>
-        <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
-        <p>See <a href="#install">Install</a> for the installer and manual steps.</p>
-      </details>
-      <details>
-        <summary>Something went wrong. What should I send?</summary>
-        <p>Press <kbd>Page Down</kbd> when it happens and again after playing. Attach the report zip to <a href="https://github.com/Normal99/TLD-RevaMP/issues">a RevaMP issue</a> and describe the problem. See <a href="#report">Report a problem</a>.</p>
-      </details>
-      <details>
-        <summary>How do I remove it?</summary>
-        <p>Run the installer and choose <strong>Uninstall</strong>, or remove the loader files from a manual installation. See <a href="#install">Install</a> for the file list.</p>
-      </details>
+    <section class="section" id="questions" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="kicker">FAQ</p>
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Does it work on the normal (non-beta) game?</summary>
+            <p>No. RevaMP is built for the beta only. The normal game uses different world generation, save and multiplayer code.</p>
+          </details>
+          <details>
+            <summary>How do we play together?</summary>
+            <p>One player starts or loads a world and chooses <strong>Host</strong> in the Multiplayer menu (<kbd>F11</kbd> in game). Steam friends select that player and choose <strong>Join</strong>. A password is optional, and no port forwarding is needed. Everyone needs the same RevaMP version; a mismatch is refused with an explanation. See <a href="#play">Play together</a>.</p>
+          </details>
+          <details>
+            <summary>What happens to my saves when I join someone?</summary>
+            <p>The host's machine owns the world and its save. Joining loads that world and leaves your own saves alone.</p>
+          </details>
+          <details>
+            <summary>Which keys does it add?</summary>
+            <p><kbd>F11</kbd> opens Multiplayer, <kbd>Page Up</kbd> shows the performance overlay, and <kbd>Page Down</kbd> saves a bug report. These keys can be changed in <code>BepInEx\config\tldrevamp.core.cfg</code>. To talk, hold the game's <strong>Voice chat</strong> key (K if unbound).</p>
+          </details>
+          <details>
+            <summary>Linux or Steam Deck?</summary>
+            <p>Use Proton. For a manual install, set Steam → <strong>Properties → General → Launch Options</strong> to:</p>
+            <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
+            <p>See <a href="#install">Install</a> for the installer and manual steps.</p>
+          </details>
+          <details>
+            <summary>Something went wrong. What should I send?</summary>
+            <p>Press <kbd>Page Down</kbd> when it happens and again after playing. Attach the report zip to <a href="https://github.com/Normal99/TLD-RevaMP/issues">a RevaMP issue</a> and describe the problem. See <a href="#report">Report a problem</a>.</p>
+          </details>
+          <details>
+            <summary>How do I remove it?</summary>
+            <p>Run the installer and choose <strong>Uninstall</strong>, or remove the loader files from a manual installation. See <a href="#install">Install</a> for the file list.</p>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="report">
-      <h2>Report a problem</h2>
-      <p><a href="https://github.com/Normal99/TLD-RevaMP/issues">Open a GitHub issue <span aria-hidden="true">↗</span></a> describing the bug and when it happened. Include your game branch and RevaMP version, what you were doing, what you expected, and what happened instead. For multiplayer, say whether you were hosting or joining and how to reproduce it.</p>
-      <p class="note">Press <kbd>Page Down</kbd> when the problem happens to save a report zip, then attach it to your issue.</p>
+    <section class="section alt" id="report" aria-labelledby="report-title">
+      <div class="wrap">
+        <p class="kicker">Help us fix it</p>
+        <h2 id="report-title">Report a problem</h2>
+        <p><a href="https://github.com/Normal99/TLD-RevaMP/issues">Open a GitHub issue <span aria-hidden="true">↗</span></a> describing the bug and when it happened. Include your game branch and RevaMP version, what you were doing, what you expected, and what happened instead. For multiplayer, say whether you were hosting or joining and how to reproduce it.</p>
+        <p class="note">Press <kbd>Page Down</kbd> when the problem happens to save a report zip, then attach it to your issue.</p>
+      </div>
     </section>
 
-    <section class="section" id="credits">
-      <h2>Credits</h2>
-      <ul class="compact-list">
-        <li><strong>The Long Drive</strong> by Gab and Genesz.</li>
-        <li><strong>BepInEx</strong> and <strong>HarmonyX</strong>, the mod loader and patching library RevaMP is built on.</li>
-        <li>The trailer brakes, parked-trailer fix and driving assists follow ideas from <strong>Long Haul Overhaul</strong> by QuantumRage &amp; Wisher; they are written anew for RevaMP.</li>
-        <li>Thanks to <strong>Killenger</strong> for the <strong>TLDAutopilot</strong> mod, used in testing.</li>
-      </ul>
+    <section class="section" id="credits" aria-labelledby="credits-title">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Thanks</p>
+          <h2 id="credits-title">Credits</h2>
+        </div>
+        <ul class="compact-list">
+          <li><strong>The Long Drive</strong> by Gab and Genesz.</li>
+          <li><strong>BepInEx</strong> and <strong>HarmonyX</strong>, the mod loader and patching library RevaMP is built on.</li>
+          <li>The trailer brakes, parked-trailer fix and driving assists follow ideas from <strong>Long Haul Overhaul</strong> by QuantumRage &amp; Wisher; they are written anew for RevaMP.</li>
+          <li>Thanks to <strong>Killenger</strong> for the <strong>TLDAutopilot</strong> mod, used in testing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <h2 id="cta-title">Hit the road</h2>
+        <p>Free, open source, and built for playing The Long Drive together.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/Normal99/TLD-RevaMP/releases/latest">Download RevaMP <span aria-hidden="true">↓</span></a>
+          <a class="button" href="https://github.com/Normal99/TLD-RevaMP">Source code <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
   </main>
 
