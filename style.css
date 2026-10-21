@@ -24,11 +24,6 @@ a { color: var(--link); text-underline-offset: 2px; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 .wrap { width: min(100% - 32px, 760px); margin-inline: auto; }
-.skip-link {
-  position: absolute; top: 8px; left: 16px; padding: 6px 10px;
-  background: var(--button); color: var(--on-button); transform: translateY(-200%);
-}
-.skip-link:focus { transform: none; }
 
 .site-header {
   display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px;
