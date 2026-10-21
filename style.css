@@ -1,27 +1,14 @@
+/* Always dark, whatever the system setting */
 :root {
-  color-scheme: light;
-  --bg: #f4f1ea;
-  --text: #1f1f1f;
-  --muted: #5d5a54;
-  --line: #d8d2c4;
-  --code-bg: #e9e4d8;
-  --link: #8a5600;
+  color-scheme: dark;
+  --bg: #0d1117;
+  --text: #e6edf3;
+  --muted: #9198a1;
+  --line: #30363d;
+  --code-bg: #161b22;
+  --link: #f2b134;
   --button: #f2b134;
   --on-button: #1a1406;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --bg: #16171a;
-    --text: #e6e3dc;
-    --muted: #9b978f;
-    --line: #2e2f34;
-    --code-bg: #232428;
-    --link: #f2b134;
-    --button: #f2b134;
-    --on-button: #1a1406;
-  }
 }
 
 * { box-sizing: border-box; }
