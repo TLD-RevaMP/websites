@@ -23,8 +23,8 @@ body {
 a { color: var(--link); text-underline-offset: 2px; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
-/* 78% of the window on wide screens; never narrower than 760px or wider than the window minus 16px each side */
-.wrap { width: min(100% - 32px, max(78%, 760px)); margin-inline: auto; }
+/* 65% of the window on wide screens; never narrower than 760px or wider than the window minus 16px each side */
+.wrap { width: min(100% - 32px, max(65%, 760px)); margin-inline: auto; }
 
 .site-header {
   display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px;
