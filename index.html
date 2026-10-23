@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Long Drive Multiplayer Mod – TLD RevaMP</title>
-  <meta name="description" content="TLD RevaMP is a free multiplayer and performance mod for The Long Drive (beta branch). Drive anywhere on the map with Steam friends, no port forwarding. Download and install steps.">
+  <title>TLD RevaMP – The Long Drive Multiplayer Mod</title>
+  <meta name="description" content="TLD RevaMP (The Long Drive Revamp) is a free multiplayer and performance mod for The Long Drive's beta branch. Play with Steam friends anywhere on the map, no port forwarding.">
   <link rel="canonical" href="https://tldrevamp.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tldrevamp.com/">
   <meta property="og:site_name" content="TLD RevaMP">
-  <meta property="og:title" content="The Long Drive Multiplayer Mod – TLD RevaMP">
+  <meta property="og:title" content="TLD RevaMP – The Long Drive Multiplayer Mod">
   <meta property="og:description" content="A free multiplayer and performance mod for The Long Drive's beta branch.">
   <meta property="og:image" content="https://tldrevamp.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "TLD RevaMP",
-    "alternateName": "The Long Drive multiplayer mod",
+    "alternateName": ["TLD Revamp", "The Long Drive Revamp", "The Long Drive multiplayer mod"],
     "description": "A free multiplayer and performance mod for the beta branch of The Long Drive.",
     "url": "https://tldrevamp.com/",
     "downloadUrl": "https://github.com/Normal99/TLD-RevaMP/releases/latest",
@@ -41,11 +41,22 @@
     "about": { "@type": "VideoGame", "name": "The Long Drive", "url": "https://store.steampowered.com/app/1017180/The_Long_Drive/" }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TLD RevaMP",
+    "alternateName": ["TLD Revamp", "tldrevamp", "The Long Drive Revamp"],
+    "url": "https://tldrevamp.com/"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header wrap">
-    <span class="brand">TLD RevaMP</span>
-    <nav aria-label="Links">
+    <a class="brand" href="/">TLD RevaMP</a>
+    <nav aria-label="Pages">
+      <a href="/install/">Install</a>
+      <a href="/multiplayer/">Multiplayer</a>
       <a href="https://github.com/Normal99/TLD-RevaMP">GitHub</a>
     </nav>
   </header>
@@ -53,7 +64,7 @@
   <main id="main" class="wrap">
     <section class="intro">
       <h1>The Long Drive multiplayer mod</h1>
-      <p>TLD RevaMP is a free mod for the <strong>beta branch</strong> of <a href="https://store.steampowered.com/app/1017180/The_Long_Drive/">The Long Drive</a>. The game runs faster, and its multiplayer is replaced with one where you can drive anywhere on the map together.</p>
+      <p>TLD RevaMP (The Long Drive Revamp) is a free mod for the <strong>beta branch</strong> of <a href="https://store.steampowered.com/app/1017180/The_Long_Drive/">The Long Drive</a>. The game runs faster, and its multiplayer is replaced with one where you can drive anywhere on the map together.</p>
       <p class="download">
         <a class="button" href="https://github.com/Normal99/TLD-RevaMP/releases/latest">Download</a>
         <span class="version">0.69.0, <time datetime="2026-10-17">17 Oct 2026</time> (<a href="https://github.com/Normal99/TLD-RevaMP/releases/tag/v0.69.0">changelog</a>)</span>
@@ -72,16 +83,16 @@
       <ol>
         <li>Steam: right-click The Long Drive → <strong>Properties → Betas</strong> → <strong>beta</strong>.</li>
         <li>Back up <code>Documents\TheLongDrive\Saves</code>.</li>
-        <li>From the <a href="https://github.com/Normal99/TLD-RevaMP/releases/latest">latest release</a>, run <code>install.ps1</code> (Windows: right-click → Run with PowerShell) or <code>bash install.sh</code> (Linux). Or extract the zip into the folder with <code>TheLongDrive.exe</code>.</li>
+        <li>Download the zip from the <a href="https://github.com/Normal99/TLD-RevaMP/releases/latest">latest release</a> and extract everything into the folder with <code>TheLongDrive.exe</code> (Steam → Manage → Browse local files).</li>
       </ol>
-      <p>A manual install on Linux also needs this launch option:</p>
+      <p>On Linux or Steam Deck, also set this launch option:</p>
       <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
-      <p>To remove it, run the installer again and pick <strong>Uninstall</strong>, or delete <code>winhttp.dll</code>, <code>doorstop_config.ini</code>, <code>.doorstop_version</code>, <code>changelog.txt</code> and the <code>BepInEx</code> folder.</p>
+      <p>More detail, updating and removing it: <a href="/install/">install guide</a>.</p>
     </section>
 
     <section id="play">
       <h2>Playing together</h2>
-      <p>Everyone needs the same version. The host loads a world, presses <kbd>F11</kbd> and picks <strong>Host</strong>. Friends press <kbd>F11</kbd>, pick the host and <strong>Join</strong>. No port forwarding; your own saves aren't touched.</p>
+      <p>Everyone needs the same version. The host loads a world, presses <kbd>F11</kbd> and picks <strong>Host</strong>. Friends press <kbd>F11</kbd>, pick the host and <strong>Join</strong>. No port forwarding; your own saves aren't touched. <a href="/multiplayer/">More on multiplayer</a>.</p>
     </section>
 
     <section id="numbers">

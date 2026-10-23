@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Install TLD RevaMP – The Long Drive Mod (Windows, Linux, Steam Deck)</title>
+  <meta name="description" content="Step-by-step install for TLD RevaMP, the multiplayer and performance mod for The Long Drive's beta branch: Windows, Linux and Steam Deck, updating and removing it.">
+  <link rel="canonical" href="https://tldrevamp.com/install/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tldrevamp.com/install/">
+  <meta property="og:site_name" content="TLD RevaMP">
+  <meta property="og:title" content="How to Install TLD RevaMP – The Long Drive Mod (Windows, Linux, Steam Deck)">
+  <meta property="og:description" content="Step-by-step install for TLD RevaMP, the multiplayer and performance mod for The Long Drive's beta branch: Windows, Linux and Steam Deck, updating and removing it.">
+  <meta property="og:image" content="https://tldrevamp.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101218'/%3E%3Cpath d='M12 4 5 28h22L20 4z' fill='%232a2f3a'/%3E%3Cpath d='M16 6v4m0 4v5m0 4v5' stroke='%23f2b134' stroke-width='2.4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css?v=6">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/">TLD RevaMP</a>
+    <nav aria-label="Pages">
+      <a href="/install/">Install</a>
+      <a href="/multiplayer/">Multiplayer</a>
+      <a href="https://github.com/Normal99/TLD-RevaMP">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>How to install TLD RevaMP</h1>
+    <p>TLD RevaMP is a mod for the beta branch of The Long Drive on Steam. It works on Windows, and on Linux and Steam Deck through Proton. The mod loader (BepInEx) comes in the same zip, so there's nothing else to download.</p>
+
+    <h2>Before you start</h2>
+    <ul>
+      <li>Switch the game to the beta branch: Steam → right-click The Long Drive → <strong>Properties → Betas</strong> → <strong>beta</strong>. RevaMP doesn't run on the normal public version.</li>
+      <li>Back up your saves. Windows: <code>Documents\TheLongDrive\Saves</code>. Linux and Steam Deck: <code>~/.local/share/Steam/steamapps/compatdata/1017180/pfx/drive_c/users/steamuser/Documents/TheLongDrive/Saves</code>.</li>
+      <li>Remove any other mod loader from the game folder first (an old TLDLoader or ModLoader install).</li>
+    </ul>
+
+    <h2>Windows</h2>
+    <ol>
+      <li>Download <code>TLD-RevaMP-&lt;version&gt;.zip</code> from the <a href="https://github.com/Normal99/TLD-RevaMP/releases/latest">latest release</a>.</li>
+      <li>Steam → right-click The Long Drive → <strong>Manage → Browse local files</strong>. That opens the folder with <code>TheLongDrive.exe</code>.</li>
+      <li>Copy everything from the zip into that folder. <code>winhttp.dll</code> has to end up next to <code>TheLongDrive.exe</code>.</li>
+      <li>Start the game. The overlay in the top-left corner shows "TLD Revamp" and the version number when the mod has loaded.</li>
+    </ol>
+
+    <h2>Linux and Steam Deck</h2>
+    <p>Do the same steps as on Windows (on Steam Deck, in Desktop Mode), then add this launch option under Steam → The Long Drive → <strong>Properties → General → Launch options</strong>:</p>
+    <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
+    <p>Without it, Proton ignores the mod loader and the game starts without RevaMP.</p>
+
+    <h2>Updating</h2>
+    <p>Close the game and copy the new zip's files over the old ones, replacing them. Your saves and settings stay. Everyone you play with needs to update too, because players on different versions can't join each other.</p>
+
+    <h2>Removing it</h2>
+    <p>Delete <code>winhttp.dll</code>, <code>doorstop_config.ini</code>, <code>.doorstop_version</code>, <code>changelog.txt</code> and the <code>BepInEx</code> folder from the game folder. On Linux, also clear the launch option.</p>
+
+    <h2>Keys</h2>
+    <p><kbd>F11</kbd> opens the multiplayer menu, <kbd>Page Up</kbd> turns the performance overlay on or off, and <kbd>Page Down</kbd> saves a bug report. None of them clash with the game's own keys. You can change them in <code>BepInEx\config\tldrevamp.core.cfg</code>, section <code>[Keys]</code>.</p>
+    <p>Next: <a href="/multiplayer/">playing The Long Drive multiplayer with RevaMP</a>.</p>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>TLD RevaMP is made by Normal99 and YujiroX2. This is an unofficial site and isn't affiliated with the developers of The Long Drive.</p>
+    <p>© 2026 tldrevamp.com. Website content all rights reserved; TLD RevaMP itself is GPL-3.0. <a href="/LICENSE">Site licence</a> · <a href="https://thelongdrive.dev/">thelongdrive.dev</a></p>
+  </footer>
+</body>
+</html>
