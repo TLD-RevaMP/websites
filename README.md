@@ -27,9 +27,10 @@ Things to keep in mind:
 
 ## Publishing
 
-Each folder with a `wrangler.jsonc` is one Cloudflare Worker, connected to this repo through Cloudflare's Workers
-Builds: root directory = that folder, no build command, deploy command `npx wrangler deploy`, watching only that
-folder's paths.
+Each folder with a `wrangler.jsonc` is one Cloudflare Worker (thelongdrive-dev, tldrevamp-com, tldrevamp-www),
+connected to this repo through Cloudflare's Workers Builds: production branch `main`, root directory = that folder, no
+build command, deploy command `npx wrangler deploy`. Every push builds all three; a site whose files didn't change is
+published again unchanged.
 
 ## Licence
 
