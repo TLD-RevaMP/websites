@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TLD RevaMP – The Long Drive Multiplayer Mod</title>
+  <meta name="description" content="TLD RevaMP (The Long Drive Revamp) is a free multiplayer and performance mod for The Long Drive's beta branch. Play with Steam friends anywhere on the map, no port forwarding.">
+  <link rel="canonical" href="https://tldrevamp.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tldrevamp.com/">
+  <meta property="og:site_name" content="TLD RevaMP">
+  <meta property="og:title" content="TLD RevaMP – The Long Drive Multiplayer Mod">
+  <meta property="og:description" content="A free multiplayer and performance mod for The Long Drive's beta branch.">
+  <meta property="og:image" content="https://tldrevamp.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TLD RevaMP, tldrevamp.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=6">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TLD RevaMP",
+    "alternateName": ["TLD Revamp", "The Long Drive Revamp", "The Long Drive multiplayer mod"],
+    "description": "A free multiplayer and performance mod for the beta branch of The Long Drive.",
+    "url": "https://tldrevamp.com/",
+    "downloadUrl": "https://github.com/Normal99/TLD-RevaMP/releases/latest",
+    "softwareVersion": "0.69.0",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Windows, Linux (Proton), Steam Deck",
+    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": [
+      { "@type": "Person", "name": "Normal99", "url": "https://github.com/Normal99" },
+      { "@type": "Person", "name": "YujiroX2", "url": "https://github.com/YujiroX2" }
+    ],
+    "about": { "@type": "VideoGame", "name": "The Long Drive", "url": "https://store.steampowered.com/app/1017180/The_Long_Drive/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TLD RevaMP",
+    "alternateName": ["TLD Revamp", "tldrevamp", "The Long Drive Revamp"],
+    "url": "https://tldrevamp.com/"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/">TLD RevaMP</a>
+    <nav aria-label="Pages">
+      <a href="/install/">Install</a>
+      <a href="/multiplayer/">Multiplayer</a>
+      <a href="https://github.com/Normal99/TLD-RevaMP">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="intro">
+      <h1>The Long Drive multiplayer mod</h1>
+      <p>TLD RevaMP (The Long Drive Revamp) is a free mod for the <strong>beta branch</strong> of <a href="https://store.steampowered.com/app/1017180/The_Long_Drive/">The Long Drive</a>. The game runs faster, and its multiplayer is replaced with one where you can drive anywhere on the map together.</p>
+      <p class="download">
+        <a class="button" href="https://github.com/Normal99/TLD-RevaMP/releases/latest">Download</a>
+        <span class="version">0.69.0, <time datetime="2026-10-17">17 Oct 2026</time> (<a href="https://github.com/Normal99/TLD-RevaMP/releases/tag/v0.69.0">changelog</a>)</span>
+      </p>
+    </section>
+
+    <section id="what">
+      <h2>What it does</h2>
+      <p><strong>Performance.</strong> Less repeated work, and world generation moved off the main thread. 16 parked cars: 52 → 72 FPS. Worst hitch while driving: halved. Plus bug fixes for cars, items and saves.</p>
+      <p><strong>Multiplayer.</strong> Players, cars, items, doors, creatures, guns, sandstorms and the radio are shared. Each player's game runs what's near them, so nobody has to stay near the host. Text chat, and proximity voice on the game's Voice chat key (K if unbound).</p>
+    </section>
+
+    <section id="install">
+      <h2>Install</h2>
+      <p>Needs The Long Drive on Steam, on Windows or Linux/Steam Deck with Proton. The mod loader (BepInEx) is included.</p>
+      <ol>
+        <li>Steam: right-click The Long Drive → <strong>Properties → Betas</strong> → <strong>beta</strong>.</li>
+        <li>Back up <code>Documents\TheLongDrive\Saves</code>.</li>
+        <li>Download the zip from the <a href="https://github.com/Normal99/TLD-RevaMP/releases/latest">latest release</a> and extract everything into the folder with <code>TheLongDrive.exe</code> (Steam → Manage → Browse local files).</li>
+      </ol>
+      <p>On Linux or Steam Deck, also set this launch option:</p>
+      <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
+      <p>More detail, updating and removing it: <a href="/install/">install guide</a>.</p>
+    </section>
+
+    <section id="play">
+      <h2>Playing together</h2>
+      <p>Everyone needs the same version. The host loads a world, presses <kbd>F11</kbd> and picks <strong>Host</strong>. Friends press <kbd>F11</kbd>, pick the host and <strong>Join</strong>. No port forwarding; your own saves aren't touched. See the <a href="/multiplayer/">guide to The Long Drive multiplayer</a>.</p>
+    </section>
+
+    <section id="numbers">
+      <h2>Numbers</h2>
+      <p>Same PC, world and scripted runs, with and without RevaMP 0.69.0. Median of 3 runs. 1280×720, Ultra, no frame cap.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Run</th><th scope="col">Base game</th><th scope="col">RevaMP</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">16 parked cars</th><td>51.6 FPS</td><td>72.3 FPS</td></tr>
+            <tr><th scope="row">300 items lying around</th><td>96.8 FPS</td><td>138.2 FPS</td></tr>
+            <tr><th scope="row">Driving at 30 m/s</th><td>158.1 FPS</td><td>188.5 FPS</td></tr>
+            <tr><th scope="row">Worst frame, driving at 30 m/s</th><td>30.6 ms</td><td>15.3 ms</td></tr>
+            <tr><th scope="row">New world, start area ready</th><td>3.56 s</td><td>2.79 s</td></tr>
+            <tr><th scope="row">Script memory</th><td>~90 MB</td><td>~125 MB</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="report">
+      <h2>Found a bug?</h2>
+      <p>Press <kbd>Page Down</kbd> when it happens to save a report zip, then <a href="https://github.com/Normal99/TLD-RevaMP/issues">open an issue</a> with the zip and what happened.</p>
+    </section>
+
+    <section id="credits">
+      <h2>Credits</h2>
+      <p>The Long Drive by Gab and Genesz. Built on BepInEx and HarmonyX. Trailer brakes and driving assists based on ideas from Long Haul Overhaul by QuantumRage and Wisher. Tested with Killenger's TLDAutopilot.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>TLD RevaMP is made by Normal99 and YujiroX2. This is an unofficial site and isn't affiliated with the developers of The Long Drive.</p>
+    <p>© 2026 tldrevamp.com. Website content all rights reserved; TLD RevaMP itself is GPL-3.0. <a href="LICENSE">Site licence</a> · <a href="https://thelongdrive.dev/">thelongdrive.dev</a></p>
+  </footer>
+</body>
+</html>
