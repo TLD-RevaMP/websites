@@ -1,0 +1,11 @@
+// www.tldrevamp.com -> tldrevamp.com (a separate Worker, so the main site's deploy never takes www over)
+{
+  "name": "tldrevamp-www",
+  "account_id": "8805710aab86a2c7ec44c59a3a1186d9",
+  "main": "index.js",
+  "compatibility_date": "2026-10-01",
+  "routes": [
+    { "pattern": "www.tldrevamp.com", "custom_domain": true }
+  ],
+  "workers_dev": false
+}
