@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog – TLD RevaMP (The Long Drive Revamp)</title>
+  <meta name="description" content="What changed in each version of TLD RevaMP, the multiplayer and performance mod for The Long Drive's beta branch, from 0.64 to 0.69.1.">
+  <link rel="canonical" href="https://tldrevamp.com/changelog/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tldrevamp.com/changelog/">
+  <meta property="og:site_name" content="TLD RevaMP">
+  <meta property="og:title" content="Changelog – TLD RevaMP (The Long Drive Revamp)">
+  <meta property="og:description" content="What changed in each version of TLD RevaMP, the multiplayer and performance mod for The Long Drive's beta branch.">
+  <meta property="og:image" content="https://tldrevamp.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css?v=6">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/">TLD RevaMP</a>
+    <nav aria-label="Pages">
+      <a href="/install/">Install</a>
+      <a href="/multiplayer/">Multiplayer</a>
+      <a href="/changelog/">Changelog</a>
+      <a href="https://github.com/TLD-RevaMP/TLD-RevaMP">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>Changelog</h1>
+    <p>What changed in each version of TLD RevaMP. Everyone in a session needs the same version. Each heading links to that release on GitHub, with its full notes and download.</p>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.69.1">0.69.1</a> <span class="version"><time datetime="2026-10-17">17 Oct 2026</time>, dev build</span></h2>
+    <ul>
+      <li>In-game mod browser: <strong>Settings → Revamp → Mods</strong> installs and removes approved mods. Changes apply after a restart.</li>
+      <li>Install scripts for Windows (<code>install.ps1</code>) and Linux/Steam Deck (<code>install.sh</code>): install, update, repair and uninstall. They check what they download and back up files they replace.</li>
+      <li>All of the mod's code, including the multiplayer API, is GPL-3.0.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.69.0">0.69.0</a> <span class="version"><time datetime="2026-10-17">17 Oct 2026</time></span></h2>
+    <ul>
+      <li>The host sees which players left, what waits for them and where, and can forget a player.</li>
+      <li>Admin commands in chat: <code>/players</code>, <code>/kick</code>, <code>/ban</code>, <code>/say</code>, <code>/save</code>, <code>/password</code>, <code>/maxplayers</code> and more. Bans last across sessions.</li>
+      <li>Dedicated servers take commands from a text file and answer in another.</li>
+      <li>The host checks shots, blows and explosions on cars, creatures and items, as it already did for players.</li>
+      <li>Multiplayer API part 2 for mod makers, and a scanner that shows what a TLD Loader mod would need for multiplayer.</li>
+      <li>Rabbits 200–300 m away no longer write a warning every frame.</li>
+      <li>A car resting on a slope stays where its owner has it on everyone's screen.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.68.5">0.68.5</a> <span class="version"><time datetime="2026-10-17">17 Oct 2026</time></span></h2>
+    <ul>
+      <li>A hat you wore when you left is back on your head when you return, and the other players see it there too.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.68.4">0.68.4</a> <span class="version"><time datetime="2026-10-17">17 Oct 2026</time></span></h2>
+    <ul>
+      <li>Sandstorms are much rarer, most pass by in the distance, and each dies down after 15–30 minutes.</li>
+      <li>New setting <strong>Settings → Revamp → World → Sandstorms</strong>: Off, Rare, Normal or Often. In multiplayer the host's setting counts.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.68.3">0.68.3</a> <span class="version"><time datetime="2026-10-17">17 Oct 2026</time></span></h2>
+    <ul>
+      <li>Players get their pockets back after the host restarts the game.</li>
+      <li>Pockets are saved with the save they belong to, so items no longer double or vanish after loading an older save.</li>
+      <li>The Car01's radiator breaks when its fuel tank explodes, also in single player.</li>
+      <li>The teleport-request setting is remembered.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.68.2">0.68.2</a> <span class="version"><time datetime="2026-10-17">17 Oct 2026</time></span></h2>
+    <ul>
+      <li>Hats, caps, glasses, helmets and masks sit on the player wearing them, for everyone, also in moving cars.</li>
+      <li>What you wear comes back with you when you rejoin.</li>
+      <li>Something taken out of a car or off a pallet shows where it was put.</li>
+      <li>A part destroyed in an explosion is gone for everyone.</li>
+      <li>The host refuses players joining under someone else's Steam ID, and limits what one player can change or send.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.68.1">0.68.1</a> <span class="version"><time datetime="2026-10-16">16 Oct 2026</time></span></h2>
+    <ul>
+      <li>Items in a car go with it when someone else takes the wheel, instead of flinging the car.</li>
+      <li>Cars that went far away come back with all their parts. Older saves are repaired when they load.</li>
+      <li>A building missing for one player is named in the host's log.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.68.0">0.68.0</a> <span class="version"><time datetime="2026-10-15">15 Oct 2026</time></span></h2>
+    <ul>
+      <li>Rabbits are back, and everyone sees the same ones, including their attacks and bites.</li>
+      <li>Trailers brake with the car towing them.</li>
+      <li>Optional driving assists: trailer sway reduction, roll correction and traction control.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.67.2">0.67.2</a> <span class="version"><time datetime="2026-10-15">15 Oct 2026</time></span></h2>
+    <ul>
+      <li>The IFA drives straight: its four driven wheels no longer fight each other.</li>
+      <li>The game's own trailer no longer pulls the tow car's hitch down.</li>
+      <li>A towed trailer and the car on it no longer jump when the tow car sets off.</li>
+      <li>An unhitched trailer no longer rolls away on a slope.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.67.1">0.67.1</a> <span class="version"><time datetime="2026-10-15">15 Oct 2026</time></span></h2>
+    <ul>
+      <li>The host is told when a player moves farther or faster than possible.</li>
+      <li>Dedicated servers get a settings section: port, password, player limit, teleport requests and autosave interval.</li>
+      <li>The question to download the host's mods no longer answers itself when you join from inside a world.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.67.0">0.67.0</a> <span class="version"><time datetime="2026-10-15">15 Oct 2026</time></span></h2>
+    <ul>
+      <li>Leave a friend's world and come back as you left: same place, same things, food, water and health.</li>
+      <li>Teleport requests: <code>/tpa &lt;name&gt;</code>, answered with <code>/y</code> or <code>/n</code>. Your car and its passengers come along.</li>
+      <li>Everyone plays by the host's game mode (survival, peaceful enemies, biome, homesick).</li>
+      <li>First multiplayer API for other mods.</li>
+      <li>Trailers can be hitched again, and a loaded trailer can be towed by another player.</li>
+      <li>Cars on a transporter or trailer stay on.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.66.9">0.66.9</a> <span class="version"><time datetime="2026-10-14">14 Oct 2026</time></span></h2>
+    <ul>
+      <li>The host checks every hit on a player against where everyone was at that moment, so a modified game can't hurt players from across the map.</li>
+      <li>Joiners can no longer save the host's world over their own.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.66.8">0.66.8</a> <span class="version"><time datetime="2026-10-14">14 Oct 2026</time></span></h2>
+    <ul>
+      <li>Items stored in a car no longer wreck it when taken out.</li>
+      <li>Bolted-on parts stay on a friend's car after a crash far away.</li>
+      <li>A car no longer vanishes and comes back every second.</li>
+      <li>Radio dials turn as a passenger at speed.</li>
+      <li>Everyone is told when someone joins with a different game version.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.66.7">0.66.7</a> <span class="version"><time datetime="2026-10-09">9 Oct 2026</time></span></h2>
+    <ul>
+      <li>Another player's car no longer vanishes and comes back.</li>
+      <li>Cars appear where they really are, with all their parts, after being out of view.</li>
+      <li>Crate loot is the same for everyone.</li>
+      <li>Radiator, oil and fuel caps stay as you set them.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.66.1">0.66.1</a> <span class="version"><time datetime="2026-10-08">8 Oct 2026</time></span></h2>
+    <ul>
+      <li>Stand in the back of a driving bus, or on a truck bed, and ride along.</li>
+      <li>Other players walk smoothly.</li>
+      <li>Joiners appear next to the host.</li>
+      <li>Now shared: car doors, hood and trunk, lights, paint, crouching, food, the radio and bus back seats.</li>
+      <li>New keys that don't clash with the game's: <kbd>F11</kbd> multiplayer menu, <kbd>Page Up</kbd> performance overlay, <kbd>Page Down</kbd> bug report. Push to talk is the game's Voice chat key, or <kbd>K</kbd>.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.65.3">0.65.3</a> <span class="version"><time datetime="2026-10-02">2 Oct 2026</time></span></h2>
+    <ul>
+      <li>New multiplayer menu, passwords and kick.</li>
+      <li>Text chat, and proximity voice chat up to about 60 m.</li>
+      <li>Sandstorms, tumbleweeds and player sounds are back and shared.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.64.13">0.64.11 to 0.64.13</a> <span class="version"><time datetime="2026-10-02">2 Oct 2026</time></span></h2>
+    <ul>
+      <li>Pushing another player's car or objects works.</li>
+      <li>Radio stations play the same song for everyone.</li>
+      <li>Other players' horns, brake lights and lamps show.</li>
+      <li>Bodies fall and lie the same for everyone.</li>
+      <li>Walking another player's vehicle by its grip works.</li>
+    </ul>
+
+    <h2><a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.64.7">0.64.3 to 0.64.7</a> <span class="version"><time datetime="2026-10-01">1–2 Oct 2026</time></span></h2>
+    <ul>
+      <li>New worlds no longer leave buildings empty.</li>
+      <li>Wheels of other players' cars sit at the right height.</li>
+      <li>Items at nearby buildings reach everyone.</li>
+      <li>A bus spawned by one player arrives with all its wheels.</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>TLD RevaMP is made by Normal99 and YujiroX2. This is an unofficial site and isn't affiliated with the developers of The Long Drive.</p>
+    <p>© 2026 tldrevamp.com. Website content all rights reserved; TLD RevaMP itself is GPL-3.0. <a href="/LICENSE">Site licence</a> · <a href="https://thelongdrive.dev/">thelongdrive.dev</a></p>
+  </footer>
+</body>
+</html>
