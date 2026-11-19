@@ -11,17 +11,102 @@
   <meta property="og:site_name" content="TLD RevaMP">
   <meta property="og:title" content="TLD RevaMP (The Long Drive Revamp) – Multiplayer Mod">
   <meta property="og:description" content="A free multiplayer and performance mod for The Long Drive's beta branch.">
-  <meta property="og:image" content="https://tldrevamp.com/og-image.png">
+  <meta property="og:image" content="https://tldrevamp.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="TLD RevaMP, tldrevamp.com">
+  <meta property="og:image:alt" content="Three players driving their own cars together on a desert road at dusk in The Long Drive">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0d1117">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="image" href="/hero-dusk.webp" fetchpriority="high">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1117; --surface: #131920; --surface-2: #19212b; --text: #e8edf2; --muted: #8b949e; --line: #252c35;
+      --accent: #f2b134; --on-accent: #1a1406; --good: #3fb950;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16.5px/1.65 Inter, "Segoe UI", system-ui, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .wrap { width: min(100% - 32px, max(65%, 760px)); margin-inline: auto; }
+
+    header { border-bottom: 1px solid var(--line); }
+    header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; padding-block: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    .brand img { width: 24px; height: 24px; }
+    nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: .92rem; }
+    nav a { color: var(--muted); }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .intro { text-align: center; padding: 72px 0 56px; }
+    .intro h1 { margin: 0 auto 16px; max-width: 18ch; font-size: clamp(2.1rem, 4.6vw, 3.2rem); line-height: 1.08; letter-spacing: -.025em; font-weight: 700; }
+    .intro p { margin: 0 auto; max-width: 58ch; font-size: 1.12rem; color: #b8c1cb; }
+    .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 8px; background: var(--accent); color: var(--on-accent); font-weight: 600; }
+    .button:hover { text-decoration: none; filter: brightness(1.08); }
+    .button.secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--line); }
+    .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: 22px; color: var(--muted); font-size: .88rem; }
+
+    section { padding: 48px 0; border-top: 1px solid var(--line); }
+    h2 { margin: 0 0 22px; font-size: 1.55rem; letter-spacing: -.01em; }
+    h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    p { margin: 0 0 14px; }
+
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
+    .two p { color: #b8c1cb; margin: 0; }
+
+    .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: s; }
+    .steps li { counter-increment: s; display: grid; grid-template-columns: 34px 1fr; gap: 14px; align-items: start; }
+    .steps li::before { content: counter(s); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line); font-weight: 600; font-size: .9rem; }
+    code, kbd { font-family: ui-monospace, Consolas, monospace; font-size: .85em; padding: 2px 6px; border-radius: 5px; background: var(--surface-2); }
+    kbd { border: 1px solid var(--line); }
+    pre { margin: 18px 0 0; padding: 12px 16px; border-radius: 8px; background: var(--surface); border: 1px solid var(--line); overflow-x: auto; }
+    pre code { background: none; padding: 0; }
+    .muted { color: var(--muted); }
+    .small { font-size: .88rem; }
+
+    .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: .94rem; font-variant-numeric: tabular-nums; }
+    th, td { padding: 11px 16px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+    tr:last-child th, tr:last-child td { border-bottom: 0; }
+    th:first-child { text-align: left; white-space: normal; }
+    thead th { background: var(--surface); color: var(--muted); font-weight: 500; font-size: .84rem; }
+    tbody th { font-weight: 400; }
+    td.better { color: var(--good); font-weight: 600; }
+
+    footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 26px 40px; }
+    @media (max-width: 700px) { .two { grid-template-columns: 1fr; } .intro { padding: 48px 0 40px; } }
+    /* the screenshot behind the intro: title over the sky, the cars below the buttons */
+    .hero { position: relative; overflow: hidden; min-height: clamp(640px, 52vw, 900px); }
+    .hero header { position: relative; z-index: 3; border-bottom-color: rgba(255,255,255,.12); }
+    .hero nav a { color: #d4d9df; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+    .hero .intro { position: relative; z-index: 2; padding: 64px 0 0; }
+    .hero .intro::before { content: ""; position: absolute; inset: 10px -12% -40px; z-index: -1; background: radial-gradient(closest-side, rgba(13,17,23,.38), rgba(13,17,23,0)); }
+    .hero h1 { max-width: none; text-shadow: 0 2px 24px rgba(0,0,0,.55); }
+    .hero .intro p { color: #eef1f4; text-shadow: 0 1px 12px rgba(0,0,0,.85); }
+    .hero .facts, .hero .facts a { color: #eef0f3; text-shadow: 0 1px 8px rgba(0,0,0,.95), 0 0 2px rgba(0,0,0,.9); }
+    .hero .facts a { color: var(--accent); }
+    .shot { position: absolute; inset: 0; z-index: 0; }
+    .shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .shot::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,17,23,.35) 0%, rgba(13,17,23,.12) 22%, rgba(13,17,23,0) 36%, rgba(13,17,23,0) 84%, var(--bg) 100%); }
+    /* phones: too narrow for text over the picture, so the picture comes right under the buttons */
+    @media (max-width: 700px) {
+      .hero { min-height: 0; display: flex; flex-direction: column; }
+      .hero > .shot { order: 3; }
+      .hero .intro { padding-top: 48px; }
+      .shot { position: relative; inset: auto; margin-top: 12px; }
+      .shot img { height: auto; }
+      .shot::before { background: linear-gradient(180deg, var(--bg) 0%, rgba(13,17,23,0) 22%, rgba(13,17,23,0) 80%, var(--bg) 100%); }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,7 +117,7 @@
     "url": "https://tldrevamp.com/",
     "downloadUrl": "https://github.com/TLD-RevaMP/TLD-RevaMP/releases/download/v0.69.1/TLD-RevaMP-0.69.1.zip",
     "datePublished": "2026-10-17",
-    "image": "https://tldrevamp.com/og-image.png",
+    "image": "https://tldrevamp.com/og-image.jpg",
     "sameAs": ["https://github.com/TLD-RevaMP/TLD-RevaMP", "https://thelongdrive.dev/"],
     "softwareVersion": "0.69.1",
     "applicationCategory": "GameApplication",
@@ -58,82 +143,106 @@
   </script>
 </head>
 <body>
-  <header class="site-header wrap">
-    <a class="brand" href="/">TLD RevaMP</a>
-    <nav aria-label="Pages">
-      <a href="/install/">Install</a>
-      <a href="/multiplayer/">Multiplayer</a>
-      <a href="/changelog/">Changelog</a>
-      <a href="https://github.com/TLD-RevaMP/TLD-RevaMP">GitHub</a>
-    </nav>
-  </header>
+  <div class="hero">
+    <div class="shot"><img src="/hero-dusk.webp" width="1919" height="760" fetchpriority="high" alt="Three players driving their own cars together on a desert road at dusk in The Long Drive with TLD RevaMP"></div>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="/"><img src="/favicon.svg" width="24" height="24" alt="">TLD RevaMP</a>
+        <nav aria-label="Pages">
+          <a href="/install/">Install</a>
+          <a href="/multiplayer/">Multiplayer</a>
+          <a href="/changelog/">Changelog</a>
+          <a href="https://github.com/TLD-RevaMP/TLD-RevaMP">GitHub</a>
+        </nav>
+      </div>
+    </header>
+    <div class="wrap">
+      <div class="intro">
+        <h1>The Long Drive multiplayer mod</h1>
+        <p>TLD RevaMP (The Long Drive Revamp) is a free mod for the <strong>beta branch</strong> of The Long Drive. The game runs faster, and you can drive anywhere on the map together.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/download/v0.69.1/TLD-RevaMP-0.69.1.zip">Download 0.69.1</a>
+          <a class="button secondary" href="/install/">Install guide</a>
+        </div>
+        <div class="facts"><span><time datetime="2026-10-17">17 Oct 2026</time></span><span>Windows, Linux, Steam Deck</span><span>Free, GPL-3.0</span><a href="/changelog/">Changelog</a></div>
+      </div>
+    </div>
+  </div>
 
-  <main id="main" class="wrap">
-    <section class="intro">
-      <h1>The Long Drive multiplayer mod</h1>
-      <p>TLD RevaMP (The Long Drive Revamp) is a free mod for the <strong>beta branch</strong> of <a href="https://store.steampowered.com/app/1017180/The_Long_Drive/">The Long Drive</a>. The game runs faster, and its multiplayer is replaced with one where you can drive anywhere on the map together.</p>
-      <p class="download">
-        <a class="button" href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/download/v0.69.1/TLD-RevaMP-0.69.1.zip">Download</a>
-        <span class="version">0.69.1, <time datetime="2026-10-17">17 Oct 2026</time> (<a href="/changelog/">changelog</a>)</span>
-      </p>
-    </section>
-
-    <section id="what">
+  <main class="wrap">
+    <section>
       <h2>What it does</h2>
-      <p><strong>Performance.</strong> Less repeated work, and world generation moved off the main thread. 16 parked cars: 52 → 72 FPS. Worst hitch while driving: halved. Plus bug fixes for cars, items and saves.</p>
-      <p><strong>Multiplayer.</strong> Players, cars, items, doors, creatures, guns, sandstorms and the radio are shared. Each player's game runs what's near them, so nobody has to stay near the host. Text chat, and proximity voice on the game's Voice chat key (K if unbound).</p>
-    </section>
-
-    <section id="install">
-      <h2>Install</h2>
-      <p>Needs The Long Drive on Steam, on Windows or Linux/Steam Deck with Proton. The mod loader (BepInEx) is included.</p>
-      <ol>
-        <li>Steam: right-click The Long Drive → <strong>Properties → Betas</strong> → <strong>beta</strong>.</li>
-        <li>Back up <code>Documents\TheLongDrive\Saves</code>.</li>
-        <li>Download <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/download/v0.69.1/TLD-RevaMP-0.69.1.zip">the zip</a> and extract everything into the folder with <code>TheLongDrive.exe</code> (Steam → Manage → Browse local files).</li>
-      </ol>
-      <p>On Linux or Steam Deck, also set this launch option:</p>
-      <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
-      <p>More detail, updating and removing it: <a href="/install/">install guide</a>.</p>
-    </section>
-
-    <section id="play">
-      <h2>Playing together</h2>
-      <p>Everyone needs the same version. The host loads a world, presses <kbd>F11</kbd> and picks <strong>Host</strong>. Friends press <kbd>F11</kbd>, pick the host and <strong>Join</strong>. No port forwarding; your own saves aren't touched. See the <a href="/multiplayer/">guide to The Long Drive multiplayer</a>.</p>
-    </section>
-
-    <section id="numbers">
-      <h2>Numbers</h2>
-      <p>Same PC, world and scripted runs, with and without RevaMP 0.69.0. Median of 3 runs. 1280×720, Ultra, no frame cap.</p>
-      <div class="table-scroll">
-        <table>
-          <thead><tr><th scope="col">Run</th><th scope="col">Base game</th><th scope="col">RevaMP</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">16 parked cars</th><td>51.6 FPS</td><td>72.3 FPS</td></tr>
-            <tr><th scope="row">300 items lying around</th><td>96.8 FPS</td><td>138.2 FPS</td></tr>
-            <tr><th scope="row">Driving at 30 m/s</th><td>158.1 FPS</td><td>188.5 FPS</td></tr>
-            <tr><th scope="row">Worst frame, driving at 30 m/s</th><td>30.6 ms</td><td>15.3 ms</td></tr>
-            <tr><th scope="row">New world, start area ready</th><td>3.56 s</td><td>2.79 s</td></tr>
-            <tr><th scope="row">Script memory</th><td>~90 MB</td><td>~125 MB</td></tr>
-          </tbody>
-        </table>
+      <div class="two">
+        <div>
+          <h3>Performance</h3>
+          <p>Less repeated work, and world generation moved off the main thread. 16 parked cars: 52 → 72 FPS. Worst hitch while driving: halved.</p>
+        </div>
+        <div>
+          <h3>Multiplayer</h3>
+          <p>Each player's game runs what's near them, so nobody has to stay near the host. Players, cars, items, doors, creatures, guns, sandstorms and the radio are shared.</p>
+        </div>
+        <div>
+          <h3>Chat and voice</h3>
+          <p>Text chat, and proximity voice on the game's Voice chat key (<kbd>K</kbd> if unbound). Over Steam, no port forwarding.</p>
+        </div>
+        <div>
+          <h3>Fixes</h3>
+          <p>Bug fixes for cars, items and saves, in single player too.</p>
+        </div>
       </div>
     </section>
 
-    <section id="report">
+    <section>
+      <h2>Install</h2>
+      <ol class="steps">
+        <li><span>Steam: right-click The Long Drive → <strong>Properties → Betas</strong> → <strong>beta</strong>.</span></li>
+        <li><span>Back up <code>Documents\TheLongDrive\Saves</code>.</span></li>
+        <li><span>Extract <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/download/v0.69.1/TLD-RevaMP-0.69.1.zip">the zip</a> into the folder with <code>TheLongDrive.exe</code> (Steam → Manage → Browse local files). The mod loader (BepInEx) is included.</span></li>
+        <li><span>Host or join with <kbd>F11</kbd>. Everyone needs the same version.</span></li>
+      </ol>
+      <pre><code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code></pre>
+      <p class="muted small" style="margin-top:8px">Launch option for Linux and Steam Deck. More detail, updating and removing it: <a href="/install/">install guide</a>.</p>
+    </section>
+
+    <section>
+      <h2>Playing together</h2>
+      <p>The host loads a world, presses <kbd>F11</kbd> and picks <strong>Host</strong>. Friends press <kbd>F11</kbd>, pick the host and <strong>Join</strong>. No port forwarding; your own saves aren't touched. See the <a href="/multiplayer/">guide to The Long Drive multiplayer</a>.</p>
+    </section>
+
+    <section>
+      <h2>Numbers</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Same PC, world and runs</th><th scope="col">Base game</th><th scope="col">RevaMP</th><th scope="col">Change</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">16 parked cars</th><td>51.6 FPS</td><td>72.3 FPS</td><td class="better">+40%</td></tr>
+            <tr><th scope="row">300 items lying around</th><td>96.8 FPS</td><td>138.2 FPS</td><td class="better">+43%</td></tr>
+            <tr><th scope="row">Driving at 30 m/s</th><td>158.1 FPS</td><td>188.5 FPS</td><td class="better">+19%</td></tr>
+            <tr><th scope="row">Worst frame while driving</th><td>30.6 ms</td><td>15.3 ms</td><td class="better">−50%</td></tr>
+            <tr><th scope="row">New world, start area ready</th><td>3.56 s</td><td>2.79 s</td><td class="better">−22%</td></tr>
+            <tr><th scope="row">Script memory</th><td>~90 MB</td><td>~125 MB</td><td>+35 MB</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted small" style="margin-top:10px">RevaMP 0.69.0, median of 3 runs, 1280×720 Ultra, no frame cap.</p>
+    </section>
+
+    <section>
       <h2>Found a bug?</h2>
       <p>Press <kbd>Page Down</kbd> when it happens to save a report zip, then <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/issues">open an issue</a> saying what happened. Don't attach the zip, since issues are public; keep it on your PC and we'll ask for it privately if we need it.</p>
     </section>
 
-    <section id="credits">
+    <section>
       <h2>Credits</h2>
       <p>The Long Drive by Gab and Genesz. Built on BepInEx and HarmonyX. Trailer brakes and driving assists based on ideas from Long Haul Overhaul by QuantumRage and Wisher. Tested with Killenger's TLDAutopilot.</p>
     </section>
   </main>
 
-  <footer class="site-footer wrap">
-    <p>TLD RevaMP is made by Normal99 and YujiroX2. This is an unofficial site and isn't affiliated with the developers of The Long Drive.</p>
-    <p>© 2026 tldrevamp.com. Website content all rights reserved; TLD RevaMP itself is GPL-3.0. <a href="LICENSE">Site licence</a> · <a href="https://thelongdrive.dev/">thelongdrive.dev</a></p>
+  <footer>
+    <div class="wrap">
+      <span>TLD RevaMP is made by Normal99 and YujiroX2. This is an unofficial site and isn't affiliated with the developers of The Long Drive.</span>
+      <span>© 2026 tldrevamp.com. Website content all rights reserved; TLD RevaMP itself is GPL-3.0. <a href="/LICENSE">Site licence</a> · <a href="https://thelongdrive.dev/">thelongdrive.dev</a></span>
+    </div>
   </footer>
 </body>
 </html>
