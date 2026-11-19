@@ -28,8 +28,8 @@
   <p class="lead">Performance fixes and rebuilt multiplayer for The Long Drive's <strong>beta</strong> branch.
   A joint project of <a href="https://github.com/Normal99">Normal99</a> and
   <a href="https://github.com/YujiroX2">YujiroX2</a>. Main page: <a href="https://tldrevamp.com/">tldrevamp.com</a>, with a guide to <a href="https://tldrevamp.com/multiplayer/">The Long Drive multiplayer</a>.</p>
-  <p><a class="button" href="https://github.com/Normal99/TLD-RevaMP/releases/latest">Download RevaMP</a>
-  <a class="button ghost" href="https://github.com/Normal99/TLD-RevaMP">Source code</a></p>
+  <p><a class="button" href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.69.0">Download RevaMP</a>
+  <a class="button ghost" href="https://github.com/TLD-RevaMP/TLD-RevaMP">Source code</a></p>
 
   <nav class="toc" aria-labelledby="contents-title">
     <h2 id="contents-title">On this page</h2>
@@ -68,7 +68,7 @@
       <li>In Steam, right-click <strong>The Long Drive</strong> &rarr; <strong>Properties</strong> &rarr;
         <strong>Betas</strong> &rarr; select <strong>beta</strong>. Let Steam finish updating.</li>
       <li>Close the game and back up <code>Documents\TheLongDrive\Saves</code> before installing or updating.</li>
-      <li>Open the <a href="https://github.com/Normal99/TLD-RevaMP/releases/latest">latest public release</a>.
+      <li>Open the <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.69.0">latest public release</a>.
         Download the RevaMP zip and follow its <code>INSTALL.txt</code>: extract into the game folder containing
         <code>TheLongDrive.exe</code>. Steam &rarr; right-click the game &rarr; <strong>Manage</strong> &rarr;
         <strong>Browse local files</strong> opens that folder.</li>
@@ -244,21 +244,21 @@
     <ul class="coming">
       <li><strong>Glued items sit in the same spot for everyone.</strong> Glue an item onto a car and the other players
         used to see it wherever their copy last was: measured 3.49 m off before, 0.07 cm after.
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/9b5b509">9b5b509</a></li>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/9b5b509">9b5b509</a></li>
       <li><strong>Doors, hood, trunk, mirrors and switches move live</strong> for the other players while someone moves
         them, instead of jumping when they let go.
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/fd7363d">fd7363d</a></li>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/fd7363d">fd7363d</a></li>
       <li><strong>Teleport requests (/tpa) work again</strong>: they were caught by an admin command. A waiting request
         can no longer be taken over by a second one, asking is limited to once every 15 s, and a car arrives at the
         height of the player it goes to.
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/645356d">645356d</a></li>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/645356d">645356d</a></li>
       <li><strong>Clearer joining:</strong> two different builds of the same version are refused before anything breaks,
         with a message saying what differs, and hosting refuses a port another game already uses.
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/72f5c55">72f5c55</a>
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/7c492bf">7c492bf</a></li>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/72f5c55">72f5c55</a>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/7c492bf">7c492bf</a></li>
       <li><strong>The host checks what other players change</strong> (values in range, at most 20 edits a second), and
         item and door changes only go to players within 1 km.
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/1a30d62">1a30d62</a></li>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/1a30d62">1a30d62</a></li>
       <li><strong>8 more fixes (59 in all):</strong> a far-item lookup that searched every item the world ever stored once
         a second, idle smoke and dust effects on parked cars, wheel settings rewritten every frame, rust and paint
         updates on ~850 parts of 16 parked cars, texture streaming that never streams anything, memory thrown away by
@@ -266,11 +266,11 @@
       <li><strong>Finding lag:</strong> a network meter (what each machine sends and receives, by message type) and a
         play log with a 30-second &ldquo;black box&rdquo;: type <code>/mark</code> and every player in the session saves
         the same moment.
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/172d73f">172d73f</a>
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/57de228">57de228</a></li>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/172d73f">172d73f</a>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/57de228">57de228</a></li>
       <li><strong>Installers</strong> for Windows and Linux / Steam Deck that check every download, back up what they
         replace, and can repair or uninstall.
-        <a class="ref" href="https://github.com/Normal99/TLD-RevaMP/commit/f9775be">f9775be</a></li>
+        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/f9775be">f9775be</a></li>
     </ul>
   </section>
 
@@ -307,7 +307,7 @@
   <details>
     <summary>Something went wrong. What should I send?</summary>
     <p>Press <strong>Page Down</strong> right when it happens and once more after playing, then attach the report zip
-    to <a href="https://github.com/Normal99/TLD-RevaMP/issues">a RevaMP issue</a>.
+    to <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/issues">a RevaMP issue</a>.
     See <a href="#reporting">Reporting problems</a> for the report folder and what to describe.</p>
   </details>
   <details>
@@ -320,7 +320,7 @@
     <h2>Reporting problems</h2>
     <p>Press <strong>Page Down</strong> when the problem happens. It writes a zip to
     <code>BepInEx/tldrevamp-feedback/</code> containing a screenshot, game and mod logs, and recent session timings.
-    Open an issue on <a href="https://github.com/Normal99/TLD-RevaMP/issues">RevaMP's GitHub</a> and attach the zip.</p>
+    Open an issue on <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/issues">RevaMP's GitHub</a> and attach the zip.</p>
     <p>Include your game branch and RevaMP version, what you were doing, what you expected and what happened.
     For multiplayer problems, say whether you were hosting or joining and how to reproduce the problem.</p>
   </section>
@@ -329,7 +329,7 @@
 <footer class="site"><div class="wrap">
   <p>© 2026 thelongdrive.dev — website content all rights reserved. TLD RevaMP is GPL-3.0.</p>
   <p>Unofficial community site. Not affiliated with, or endorsed by, the developers of The Long Drive.
-  &middot; <a href="/about.html">About &amp; credits</a> &middot; <a href="https://github.com/Normal99/TLD-RevaMP">TLD RevaMP on GitHub</a></p>
+  &middot; <a href="/about.html">About &amp; credits</a> &middot; <a href="https://github.com/TLD-RevaMP/TLD-RevaMP">TLD RevaMP on GitHub</a></p>
 </div></footer>
 </body>
 </html>
