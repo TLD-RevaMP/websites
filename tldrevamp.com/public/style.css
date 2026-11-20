@@ -27,10 +27,11 @@ a:hover { text-decoration-thickness: 2px; }
 .wrap { width: min(100% - 32px, max(65%, 760px)); margin-inline: auto; }
 
 .site-header {
-  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px;
-  padding-block: 18px; border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px;
+  padding-block: 16px; border-bottom: 1px solid var(--line);
 }
-.brand { color: var(--text); font-weight: 700; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; text-decoration: none; }
+.brand img { width: 24px; height: 24px; }
 .site-header nav { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .92rem; }
 .site-header nav a { color: var(--muted); }
 .site-header nav a:hover { color: var(--text); }
