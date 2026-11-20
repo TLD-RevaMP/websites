@@ -28,7 +28,7 @@
   <p class="lead">An overhaul for The Long Drive's <strong>beta</strong> branch: performance fixes, rebuilt multiplayer, and a base for other mods.
   A joint project of <a href="https://github.com/Normal99">Normal99</a> and
   <a href="https://github.com/YujiroX2">YujiroX2</a>. Main page: <a href="https://tldrevamp.com/">tldrevamp.com</a>, with a guide to <a href="https://tldrevamp.com/multiplayer/">The Long Drive multiplayer</a>.</p>
-  <p><a class="button" href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/download/v0.69.1/TLD-RevaMP-0.69.1.zip">Download RevaMP</a>
+  <p><a class="button" href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/download/v0.69.2/TLD-RevaMP-0.69.2.zip">Download RevaMP</a>
   <a class="button ghost" href="https://github.com/TLD-RevaMP/TLD-RevaMP">Source code</a></p>
 
   <nav class="toc" aria-labelledby="contents-title">
@@ -39,7 +39,6 @@
       <li><a href="#benchmark">Measured results</a></li>
       <li><a href="#multiplayer">Playing together</a></li>
       <li><a href="#fixes">Game fixes</a></li>
-      <li><a href="#next">Coming in the next release</a></li>
       <li><a href="#questions">Questions</a></li>
       <li><a href="#reporting">Reporting problems</a></li>
     </ul>
@@ -55,7 +54,7 @@
         generation and fix bugs in cars, items and saves. The comparisons below show the measured changes.</li>
       <li><strong>Playing together:</strong> a multiplayer system built from scratch replaces the beta's own
         multiplayer, sharing players, vehicles, items and world interactions.</li>
-      <li><strong>A base for other mods:</strong> an in-game mod browser installs approved mods, and a multiplayer
+      <li><strong>A base for other mods:</strong> an in-game mod list installs and updates mods, and a multiplayer
         API lets mod makers share their mod's objects with everyone in a session. More is on the way.</li>
     </ul>
     <p>It needs your own copy of The Long Drive; the download contains the mod and its loader, not the game.
@@ -70,7 +69,7 @@
       <li>In Steam, right-click <strong>The Long Drive</strong> &rarr; <strong>Properties</strong> &rarr;
         <strong>Betas</strong> &rarr; select <strong>beta</strong>. Let Steam finish updating.</li>
       <li>Close the game and back up <code>Documents\TheLongDrive\Saves</code> before installing or updating.</li>
-      <li>Open the <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.69.1">latest release</a>.
+      <li>Open the <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/releases/tag/v0.69.2">latest release</a>.
         Download the RevaMP zip and follow its <code>INSTALL.txt</code>: extract into the game folder containing
         <code>TheLongDrive.exe</code>. Steam &rarr; right-click the game &rarr; <strong>Manage</strong> &rarr;
         <strong>Browse local files</strong> opens that folder.</li>
@@ -182,7 +181,8 @@
         fuel and fluids), loose items, building doors and gates, creatures, guns, bullet holes and explosions,
         sandstorms, tumbleweeds and the radio. Players can stand in a moving bus or on a car.</li>
       <li><strong>Text chat</strong> and <strong>proximity voice</strong> (heard within 60 m).</li>
-      <li><strong>Mod transfer:</strong> a player missing a mod the host uses gets it from the host, if it's on RevaMP's approved list.</li>
+      <li><strong>Required mods:</strong> a player whose multiplayer mods differ from the host's gets a list of them and
+        installs them from the mod list. The host never sends mod files.</li>
     </ul>
     <table>
       <thead>
@@ -235,44 +235,10 @@
       <li><strong>Rabbits</strong> and <strong>sandstorms</strong>: still in the beta's files, but nothing started them.</li>
       <li><strong>Trailers</strong> that hitch, brake with the car, and don't creep away when parked.</li>
       <li><strong>Driving assists</strong> (all optional): trailer sway reduction, roll correction, traction control.</li>
-      <li><strong>In-game mod browser</strong> (Settings &rarr; Revamp &rarr; Mods): install, update and remove approved mods.</li>
-      <li><strong>One-key bug reports</strong> (Page Down): a zip with a screenshot, logs and session timings.</li>
-    </ul>
-  </section>
-
-  <section class="work" id="next">
-    <h2>Coming in the next release</h2>
-    <p>Already in RevaMP's code on its <code>dev</code> branch, not in a release yet. Each item links to the change itself.</p>
-    <ul class="coming">
-      <li><strong>Glued items sit in the same spot for everyone.</strong> Glue an item onto a car and the other players
-        used to see it wherever their copy last was: measured 3.49 m off before, 0.07 cm after.
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/9b5b509">9b5b509</a></li>
-      <li><strong>Doors, hood, trunk, mirrors and switches move live</strong> for the other players while someone moves
-        them, instead of jumping when they let go.
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/fd7363d">fd7363d</a></li>
-      <li><strong>Teleport requests (/tpa) work again</strong>: they were caught by an admin command. A waiting request
-        can no longer be taken over by a second one, asking is limited to once every 15 s, and a car arrives at the
-        height of the player it goes to.
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/645356d">645356d</a></li>
-      <li><strong>Clearer joining:</strong> two different builds of the same version are refused before anything breaks,
-        with a message saying what differs, and hosting refuses a port another game already uses.
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/72f5c55">72f5c55</a>
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/7c492bf">7c492bf</a></li>
-      <li><strong>The host checks what other players change</strong> (values in range, at most 20 edits a second), and
-        item and door changes only go to players within 1 km.
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/1a30d62">1a30d62</a></li>
-      <li><strong>8 more fixes (59 in all):</strong> a far-item lookup that searched every item the world ever stored once
-        a second, idle smoke and dust effects on parked cars, wheel settings rewritten every frame, rust and paint
-        updates on ~850 parts of 16 parked cars, texture streaming that never streams anything, memory thrown away by
-        what you look at and by your own outfit, and optional visual trade-offs.</li>
-      <li><strong>Finding lag:</strong> a network meter (what each machine sends and receives, by message type) and a
-        play log with a 30-second &ldquo;black box&rdquo;: type <code>/mark</code> and every player in the session saves
-        the same moment.
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/172d73f">172d73f</a>
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/57de228">57de228</a></li>
-      <li><strong>Installers</strong> for Windows and Linux / Steam Deck that check every download, back up what they
-        replace, and can repair or uninstall.
-        <a class="ref" href="https://github.com/TLD-RevaMP/TLD-RevaMP/commit/f9775be">f9775be</a></li>
+      <li><strong>In-game mod list</strong> (the Mods button on the main menu and in the pause menu): install, update,
+        disable and remove mods.</li>
+      <li><strong>Bug reports</strong> (Ctrl+Insert, or <code>/bug</code> in chat): a zip with the recent game state and your
+        note, without screenshots, raw logs or player names.</li>
     </ul>
   </section>
 
@@ -297,9 +263,12 @@
   </details>
   <details>
     <summary>Which keys does it add?</summary>
-    <p><strong>F11</strong> Multiplayer menu, <strong>Page Up</strong> performance overlay, <strong>Page Down</strong> bug
-    report, and the game's <strong>Voice chat</strong> key (K if it isn't bound) to talk. None of them is a key the
-    game itself uses; they can be changed in <code>BepInEx\config\tldrevamp.core.cfg</code>.</p>
+    <p><strong>F11</strong> Multiplayer menu, <strong>Page Up</strong> performance overlay, <strong>Ctrl+Insert</strong> bug
+    report, <strong>Scroll Lock</strong> session marks, <strong>Ctrl+F9</strong> record a replay, <strong>Ctrl+F10</strong>
+    watch the latest replay, and the game's <strong>Voice chat</strong> key (K if it isn't bound) to talk; hold
+    <strong>O</strong> to talk to every player. None of them is a key the game itself uses; RevaMP's own keys can be
+    changed in Settings &rarr; Revamp &rarr; Keys or in <code>BepInEx\config\tldrevamp.core.cfg</code>, the
+    talk-to-everyone key in Settings &rarr; Revamp &rarr; Multiplayer.</p>
   </details>
   <details>
     <summary>Linux or Steam Deck?</summary>
@@ -308,7 +277,7 @@
   </details>
   <details>
     <summary>Something went wrong. What should I do?</summary>
-    <p>Press <strong>Page Down</strong> right when it happens, then describe it in
+    <p>Press <strong>Ctrl+Insert</strong> right when it happens (or type <code>/bug</code> in chat), then describe it in
     <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/issues">a RevaMP issue</a>. Keep the report zip on your PC.
     See <a href="#reporting">Reporting problems</a> for the report folder and what to describe.</p>
   </details>
@@ -320,8 +289,11 @@
 
   <section class="work" id="reporting">
     <h2>Reporting problems</h2>
-    <p>Press <strong>Page Down</strong> when the problem happens. It writes a zip to
-    <code>BepInEx/tldrevamp-feedback/</code> containing a screenshot, game and mod logs, and recent session timings.
+    <p>Press <strong>Ctrl+Insert</strong> when the problem happens, write a short note and press Enter, or type
+    <code>/bug</code> and a note in chat. It writes a zip to <code>BepInEx/tldrevamp-feedback/</code> with your note, the
+    recent game state, performance and network numbers, the mod's numeric settings, your hardware models (CPU, GPU,
+    RAM, OS), and snapshots of the car you sit in, the item you look at and the parts near you. When you host or play
+    alone, it also holds your latest autosave. Screenshots, raw logs, player names and file paths are left out.
     Open an issue on <a href="https://github.com/TLD-RevaMP/TLD-RevaMP/issues">RevaMP's GitHub</a>, but don't attach the zip:
     issues are public. Keep it on your PC; we'll ask for it privately if we need it.</p>
     <p>Include your game branch and RevaMP version, what you were doing, what you expected and what happened.
